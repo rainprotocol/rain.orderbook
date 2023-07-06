@@ -1,0 +1,2555 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title></title>
+        <meta name="robots" content="noindex" />
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="book.css">
+
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = null;
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item "><a href="index.html">Home</a></li><li class="chapter-item affix "><li class="part-title">src</li><li class="chapter-item "><a href="src/abstract/index.html">❱ abstract</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="src/abstract/OrderBookFlashBorrower.sol/error.BadLender.html">BadLender</a></li><li class="chapter-item "><a href="src/abstract/OrderBookFlashBorrower.sol/error.BadInitiator.html">BadInitiator</a></li><li class="chapter-item "><a href="src/abstract/OrderBookFlashBorrower.sol/error.FlashLoanFailed.html">FlashLoanFailed</a></li><li class="chapter-item "><a href="src/abstract/OrderBookFlashBorrower.sol/error.Initializing.html">Initializing</a></li><li class="chapter-item "><a href="src/abstract/OrderBookFlashBorrower.sol/error.SwapFailed.html">SwapFailed</a></li><li class="chapter-item "><a href="src/abstract/OrderBookFlashBorrower.sol/error.MinimumOutput.html">MinimumOutput</a></li><li class="chapter-item "><a href="src/abstract/OrderBookFlashBorrower.sol/error.NonZeroBeforeArbStack.html">NonZeroBeforeArbStack</a></li><li class="chapter-item "><a href="src/abstract/OrderBookFlashBorrower.sol/struct.OrderBookFlashBorrowerConfig.html">OrderBookFlashBorrowerConfig</a></li><li class="chapter-item "><a href="src/abstract/OrderBookFlashBorrower.sol/abstract.OrderBookFlashBorrower.html">OrderBookFlashBorrower</a></li><li class="chapter-item "><a href="src/abstract/OrderBookFlashBorrower.sol/constants.OrderBookFlashBorrower.html">OrderBookFlashBorrower constants</a></li><li class="chapter-item "><a href="src/abstract/OrderBookFlashLender.sol/error.ZeroToken.html">ZeroToken</a></li><li class="chapter-item "><a href="src/abstract/OrderBookFlashLender.sol/error.ZeroReceiver.html">ZeroReceiver</a></li><li class="chapter-item "><a href="src/abstract/OrderBookFlashLender.sol/error.ZeroAmount.html">ZeroAmount</a></li><li class="chapter-item "><a href="src/abstract/OrderBookFlashLender.sol/error.FlashLenderCallbackFailed.html">FlashLenderCallbackFailed</a></li><li class="chapter-item "><a href="src/abstract/OrderBookFlashLender.sol/error.ActiveDebt.html">ActiveDebt</a></li><li class="chapter-item "><a href="src/abstract/OrderBookFlashLender.sol/abstract.OrderBookFlashLender.html">OrderBookFlashLender</a></li><li class="chapter-item "><a href="src/abstract/OrderBookFlashLender.sol/constants.OrderBookFlashLender.html">OrderBookFlashLender constants</a></li></ol></li><li class="chapter-item "><a href="src/concrete/index.html">❱ concrete</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="src/concrete/GenericPoolOrderBookFlashBorrower.sol/contract.GenericPoolOrderBookFlashBorrower.html">GenericPoolOrderBookFlashBorrower</a></li><li class="chapter-item "><a href="src/concrete/GenericPoolOrderBookFlashBorrower.sol/constants.GenericPoolOrderBookFlashBorrower.html">GenericPoolOrderBookFlashBorrower constants</a></li><li class="chapter-item "><a href="src/concrete/OrderBook.sol/error.ReentrancyGuardReentrantCall.html">ReentrancyGuardReentrantCall</a></li><li class="chapter-item "><a href="src/concrete/OrderBook.sol/error.NotOrderOwner.html">NotOrderOwner</a></li><li class="chapter-item "><a href="src/concrete/OrderBook.sol/error.TokenMismatch.html">TokenMismatch</a></li><li class="chapter-item "><a href="src/concrete/OrderBook.sol/error.MinimumInput.html">MinimumInput</a></li><li class="chapter-item "><a href="src/concrete/OrderBook.sol/error.SameOwner.html">SameOwner</a></li><li class="chapter-item "><a href="src/concrete/OrderBook.sol/contract.OrderBook.html">OrderBook</a></li><li class="chapter-item "><a href="src/concrete/OrderBook.sol/constants.OrderBook.html">OrderBook constants</a></li></ol></li><li class="chapter-item "><a href="src/interface/index.html">❱ interface</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="src/interface/deprecated/index.html">❱ deprecated</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="src/interface/deprecated/IOrderBookV1.sol/struct.DepositConfig.html">DepositConfig</a></li><li class="chapter-item "><a href="src/interface/deprecated/IOrderBookV1.sol/struct.WithdrawConfig.html">WithdrawConfig</a></li><li class="chapter-item "><a href="src/interface/deprecated/IOrderBookV1.sol/struct.IO.html">IO</a></li><li class="chapter-item "><a href="src/interface/deprecated/IOrderBookV1.sol/struct.OrderConfig.html">OrderConfig</a></li><li class="chapter-item "><a href="src/interface/deprecated/IOrderBookV1.sol/struct.Order.html">Order</a></li><li class="chapter-item "><a href="src/interface/deprecated/IOrderBookV1.sol/struct.TakeOrdersConfig.html">TakeOrdersConfig</a></li><li class="chapter-item "><a href="src/interface/deprecated/IOrderBookV1.sol/struct.TakeOrderConfig.html">TakeOrderConfig</a></li><li class="chapter-item "><a href="src/interface/deprecated/IOrderBookV1.sol/struct.ClearConfig.html">ClearConfig</a></li><li class="chapter-item "><a href="src/interface/deprecated/IOrderBookV1.sol/struct.ClearStateChange.html">ClearStateChange</a></li><li class="chapter-item "><a href="src/interface/deprecated/IOrderBookV1.sol/interface.IOrderBookV1.html">IOrderBookV1</a></li></ol></li><li class="chapter-item "><a href="src/interface/ierc3156/index.html">❱ ierc3156</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="src/interface/ierc3156/IERC3156FlashBorrower.sol/interface.IERC3156FlashBorrower.html">IERC3156FlashBorrower</a></li><li class="chapter-item "><a href="src/interface/ierc3156/IERC3156FlashBorrower.sol/constants.IERC3156FlashBorrower.html">IERC3156FlashBorrower constants</a></li><li class="chapter-item "><a href="src/interface/ierc3156/IERC3156FlashLender.sol/interface.IERC3156FlashLender.html">IERC3156FlashLender</a></li></ol></li><li class="chapter-item "><a href="src/interface/unstable/index.html">❱ unstable</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="src/interface/unstable/IOrderBookV3.sol/struct.IO.html">IO</a></li><li class="chapter-item "><a href="src/interface/unstable/IOrderBookV3.sol/struct.OrderConfig.html">OrderConfig</a></li><li class="chapter-item "><a href="src/interface/unstable/IOrderBookV3.sol/struct.Order.html">Order</a></li><li class="chapter-item "><a href="src/interface/unstable/IOrderBookV3.sol/struct.TakeOrdersConfig.html">TakeOrdersConfig</a></li><li class="chapter-item "><a href="src/interface/unstable/IOrderBookV3.sol/struct.TakeOrderConfig.html">TakeOrderConfig</a></li><li class="chapter-item "><a href="src/interface/unstable/IOrderBookV3.sol/struct.ClearConfig.html">ClearConfig</a></li><li class="chapter-item "><a href="src/interface/unstable/IOrderBookV3.sol/struct.ClearStateChange.html">ClearStateChange</a></li><li class="chapter-item "><a href="src/interface/unstable/IOrderBookV3.sol/interface.IOrderBookV3.html">IOrderBookV3</a></li></ol></li><li class="chapter-item "><a href="src/interface/IOrderBookV2.sol/struct.DepositConfig.html">DepositConfig</a></li><li class="chapter-item "><a href="src/interface/IOrderBookV2.sol/struct.WithdrawConfig.html">WithdrawConfig</a></li><li class="chapter-item "><a href="src/interface/IOrderBookV2.sol/struct.IO.html">IO</a></li><li class="chapter-item "><a href="src/interface/IOrderBookV2.sol/struct.OrderConfig.html">OrderConfig</a></li><li class="chapter-item "><a href="src/interface/IOrderBookV2.sol/struct.Order.html">Order</a></li><li class="chapter-item "><a href="src/interface/IOrderBookV2.sol/struct.TakeOrdersConfig.html">TakeOrdersConfig</a></li><li class="chapter-item "><a href="src/interface/IOrderBookV2.sol/struct.TakeOrderConfig.html">TakeOrderConfig</a></li><li class="chapter-item "><a href="src/interface/IOrderBookV2.sol/struct.ClearConfig.html">ClearConfig</a></li><li class="chapter-item "><a href="src/interface/IOrderBookV2.sol/struct.ClearStateChange.html">ClearStateChange</a></li><li class="chapter-item "><a href="src/interface/IOrderBookV2.sol/interface.IOrderBookV2.html">IOrderBookV2</a></li></ol></li><li class="chapter-item "><a href="src/lib/index.html">❱ lib</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="src/lib/LibOrder.sol/library.LibOrder.html">LibOrder</a></li><li class="chapter-item "><a href="src/lib/LibOrderBook.sol/struct.OrderIOCalculation.html">OrderIOCalculation</a></li><li class="chapter-item "><a href="src/lib/LibOrderBook.sol/library.LibOrderBook.html">LibOrderBook</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/rainprotocol/rain.orderbook" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="rainorderbook"><a class="header" href="#rainorderbook">rain.orderbook</a></h1>
+<p>Docs at https://rainprotocol.github.io/foundry.template</p>
+<h2 id="use-as-template"><a class="header" href="#use-as-template">Use as template</a></h2>
+<pre><code>forge init -t rainprotocol/foundry.template &lt;projectname&gt;
+cd &lt;projectname&gt;
+forge install foundry-rs/forge-std
+</code></pre>
+<p>Then update the readme, set the docs url and configure github pages on github repo settings.</p>
+<p>For CI deployments, setup all the environment variables and define contracts to
+deploy in the matrix.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="contents"><a class="header" href="#contents">Contents</a></h1>
+<ul>
+<li><a href="src/abstract/OrderBookFlashBorrower.sol/error.BadLender.html">BadLender</a></li>
+<li><a href="src/abstract/OrderBookFlashBorrower.sol/error.BadInitiator.html">BadInitiator</a></li>
+<li><a href="src/abstract/OrderBookFlashBorrower.sol/error.FlashLoanFailed.html">FlashLoanFailed</a></li>
+<li><a href="src/abstract/OrderBookFlashBorrower.sol/error.Initializing.html">Initializing</a></li>
+<li><a href="src/abstract/OrderBookFlashBorrower.sol/error.SwapFailed.html">SwapFailed</a></li>
+<li><a href="src/abstract/OrderBookFlashBorrower.sol/error.MinimumOutput.html">MinimumOutput</a></li>
+<li><a href="src/abstract/OrderBookFlashBorrower.sol/error.NonZeroBeforeArbStack.html">NonZeroBeforeArbStack</a></li>
+<li><a href="src/abstract/OrderBookFlashBorrower.sol/struct.OrderBookFlashBorrowerConfig.html">OrderBookFlashBorrowerConfig</a></li>
+<li><a href="src/abstract/OrderBookFlashBorrower.sol/abstract.OrderBookFlashBorrower.html">OrderBookFlashBorrower</a></li>
+<li><a href="src/abstract/OrderBookFlashBorrower.sol/constants.OrderBookFlashBorrower.html">OrderBookFlashBorrower constants</a></li>
+<li><a href="src/abstract/OrderBookFlashLender.sol/error.ZeroToken.html">ZeroToken</a></li>
+<li><a href="src/abstract/OrderBookFlashLender.sol/error.ZeroReceiver.html">ZeroReceiver</a></li>
+<li><a href="src/abstract/OrderBookFlashLender.sol/error.ZeroAmount.html">ZeroAmount</a></li>
+<li><a href="src/abstract/OrderBookFlashLender.sol/error.FlashLenderCallbackFailed.html">FlashLenderCallbackFailed</a></li>
+<li><a href="src/abstract/OrderBookFlashLender.sol/error.ActiveDebt.html">ActiveDebt</a></li>
+<li><a href="src/abstract/OrderBookFlashLender.sol/abstract.OrderBookFlashLender.html">OrderBookFlashLender</a></li>
+<li><a href="src/abstract/OrderBookFlashLender.sol/constants.OrderBookFlashLender.html">OrderBookFlashLender constants</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="badlender"><a class="header" href="#badlender">BadLender</a></h1>
+<p><a href="https://github.com/rainprotocol/rain.orderbook/blob/bc1ef8bda6d1f1c6857ff284f17d6369cd1c4dbe/src/abstract/OrderBookFlashBorrower.sol">Git Source</a></p>
+<p>Thrown when the lender is not the trusted <code>OrderBook</code>.</p>
+<pre><code class="language-solidity">error BadLender(address badLender);
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="badinitiator"><a class="header" href="#badinitiator">BadInitiator</a></h1>
+<p><a href="https://github.com/rainprotocol/rain.orderbook/blob/bc1ef8bda6d1f1c6857ff284f17d6369cd1c4dbe/src/abstract/OrderBookFlashBorrower.sol">Git Source</a></p>
+<p>Thrown when the initiator is not <code>ZeroExOrderBookFlashBorrower</code>.</p>
+<pre><code class="language-solidity">error BadInitiator(address badInitiator);
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="flashloanfailed"><a class="header" href="#flashloanfailed">FlashLoanFailed</a></h1>
+<p><a href="https://github.com/rainprotocol/rain.orderbook/blob/bc1ef8bda6d1f1c6857ff284f17d6369cd1c4dbe/src/abstract/OrderBookFlashBorrower.sol">Git Source</a></p>
+<p>Thrown when the flash loan fails somehow.</p>
+<pre><code class="language-solidity">error FlashLoanFailed();
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="initializing"><a class="header" href="#initializing">Initializing</a></h1>
+<p><a href="https://github.com/rainprotocol/rain.orderbook/blob/bc1ef8bda6d1f1c6857ff284f17d6369cd1c4dbe/src/abstract/OrderBookFlashBorrower.sol">Git Source</a></p>
+<p>Thrown when calling functions while the contract is still initializing.</p>
+<pre><code class="language-solidity">error Initializing();
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="swapfailed"><a class="header" href="#swapfailed">SwapFailed</a></h1>
+<p><a href="https://github.com/rainprotocol/rain.orderbook/blob/bc1ef8bda6d1f1c6857ff284f17d6369cd1c4dbe/src/abstract/OrderBookFlashBorrower.sol">Git Source</a></p>
+<p>Thrown when the swap fails.</p>
+<pre><code class="language-solidity">error SwapFailed();
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="minimumoutput"><a class="header" href="#minimumoutput">MinimumOutput</a></h1>
+<p><a href="https://github.com/rainprotocol/rain.orderbook/blob/bc1ef8bda6d1f1c6857ff284f17d6369cd1c4dbe/src/abstract/OrderBookFlashBorrower.sol">Git Source</a></p>
+<p>Thrown when the minimum output for the sender is not met after the arb.</p>
+<pre><code class="language-solidity">error MinimumOutput(uint256 minimum, uint256 actual);
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="nonzerobeforearbstack"><a class="header" href="#nonzerobeforearbstack">NonZeroBeforeArbStack</a></h1>
+<p><a href="https://github.com/rainprotocol/rain.orderbook/blob/bc1ef8bda6d1f1c6857ff284f17d6369cd1c4dbe/src/abstract/OrderBookFlashBorrower.sol">Git Source</a></p>
+<p>Thrown when the stack is not empty after the access control dispatch.</p>
+<pre><code class="language-solidity">error NonZeroBeforeArbStack();
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="orderbookflashborrowerconfig"><a class="header" href="#orderbookflashborrowerconfig">OrderBookFlashBorrowerConfig</a></h1>
+<p><a href="https://github.com/rainprotocol/rain.orderbook/blob/bc1ef8bda6d1f1c6857ff284f17d6369cd1c4dbe/src/abstract/OrderBookFlashBorrower.sol">Git Source</a></p>
+<p>Config for <code>OrderBookFlashBorrower</code> to initialize.</p>
+<pre><code class="language-solidity">struct OrderBookFlashBorrowerConfig {
+    address orderBook;
+    EvaluableConfig evaluableConfig;
+    bytes implementationData;
+}
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="orderbookflashborrower"><a class="header" href="#orderbookflashborrower">OrderBookFlashBorrower</a></h1>
+<p><a href="https://github.com/rainprotocol/rain.orderbook/blob/bc1ef8bda6d1f1c6857ff284f17d6369cd1c4dbe/src/abstract/OrderBookFlashBorrower.sol">Git Source</a></p>
+<p><strong>Inherits:</strong>
+<a href="src/abstract/OrderBookFlashBorrower.sol//src/interface/ierc3156/IERC3156FlashBorrower.sol/interface.IERC3156FlashBorrower.html">IERC3156FlashBorrower</a>, ICloneableV2, ReentrancyGuard, Initializable, DeployerDiscoverableMetaV1, ERC165</p>
+<p>Abstract contract that liq-source specifialized contracts can inherit
+to provide flash loan based arbitrage against external liquidity sources to
+fill orderbook orders.
+For example consider a simple order:
+input = DAI
+output = USDT
+IORatio = 1.01e18
+Order amount = 100e18
+Assume external liq is offering 102 DAI per USDT so it exceeds the IO ratio
+but the order itself has no way to interact with the external contract.
+The <code>OrderBookFlashBorrower</code> can:</p>
+<ul>
+<li>Flash loan 100 USDT from <code>Orderbook</code></li>
+<li>Sell the 100 USDT for 102 DAI on external liq</li>
+<li>Take the order, giving 101 DAI and paying down 100 USDT loan</li>
+<li>Keep 1 DAI profit
+As this contract is expected to be cloned using a minimal proxy there will
+be many copies of it in the wild. Each copy can be access gated by a Rain
+expression that is evaluated before anything else happens in <code>arb</code>. There
+are many reasons why this might be desirable:</li>
+<li>Regulatory reasons that restrict how an arb bot operator can interact with
+orders and/or external liq.</li>
+<li>The arb operator wants to attempt to prevent front running by other bots.</li>
+<li>The arb operator may prefer a dedicated instance of the contract to make
+it easier to track profits, etc.</li>
+</ul>
+<h2 id="state-variables"><a class="header" href="#state-variables">State Variables</a></h2>
+<h3 id="sorderbook"><a class="header" href="#sorderbook">sOrderBook</a></h3>
+<p><code>OrderBook</code> contract to lend and arb against.</p>
+<pre><code class="language-solidity">IOrderBookV2 public sOrderBook;
+</code></pre>
+<h3 id="si9rdispatch"><a class="header" href="#si9rdispatch">sI9rDispatch</a></h3>
+<p>The encoded dispatch that will run for access control to <code>arb</code>.</p>
+<pre><code class="language-solidity">EncodedDispatch public sI9rDispatch;
+</code></pre>
+<h3 id="si9r"><a class="header" href="#si9r">sI9r</a></h3>
+<p>The interpreter that will eval access control to <code>arb</code>.</p>
+<pre><code class="language-solidity">IInterpreterV1 public sI9r;
+</code></pre>
+<h3 id="si9rstore"><a class="header" href="#si9rstore">sI9rStore</a></h3>
+<p>The associated store for the interpreter.</p>
+<pre><code class="language-solidity">IInterpreterStoreV1 public sI9rStore;
+</code></pre>
+<h2 id="functions"><a class="header" href="#functions">Functions</a></h2>
+<h3 id="constructor"><a class="header" href="#constructor">constructor</a></h3>
+<pre><code class="language-solidity">constructor(bytes32 metaHash, DeployerDiscoverableMetaV1ConstructionConfig memory config)
+    DeployerDiscoverableMetaV1(metaHash, config);
+</code></pre>
+<h3 id="supportsinterface"><a class="header" href="#supportsinterface">supportsInterface</a></h3>
+<pre><code class="language-solidity">function supportsInterface(bytes4 interfaceId) public view virtual override returns (bool);
+</code></pre>
+<h3 id="_beforeinitialize"><a class="header" href="#_beforeinitialize">_beforeInitialize</a></h3>
+<p>Hook called before initialize happens. Inheriting contracts can perform
+internal state maintenance before any external contract calls are made.</p>
+<pre><code class="language-solidity">function _beforeInitialize(bytes memory data) internal virtual;
+</code></pre>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>data</code></td><td><code>bytes</code></td><td>Arbitrary bytes the child may use to initialize.</td></tr>
+</tbody></table>
+</div>
+<h3 id="initialize"><a class="header" href="#initialize">initialize</a></h3>
+<p>Type hints for the input encoding for the <code>initialize</code> function.
+Reverts ALWAYS with <code>InitializeSignatureFn</code> as per ICloneableV2.</p>
+<pre><code class="language-solidity">function initialize(OrderBookFlashBorrowerConfig memory) external pure returns (bytes32);
+</code></pre>
+<h3 id="initialize-1"><a class="header" href="#initialize-1">initialize</a></h3>
+<pre><code class="language-solidity">function initialize(bytes memory data) external initializer nonReentrant returns (bytes32);
+</code></pre>
+<h3 id="onlynotinitializing"><a class="header" href="#onlynotinitializing">onlyNotInitializing</a></h3>
+<p>Ensure the contract is not initializing.</p>
+<pre><code class="language-solidity">modifier onlyNotInitializing();
+</code></pre>
+<h3 id="_exchange"><a class="header" href="#_exchange">_exchange</a></h3>
+<p>Hook that inheriting contracts MUST implement in order to achieve
+anything other than raising the ambient temperature of the room.
+<code>_exchange</code> is responsible for converting the flash loaned assets into
+the assets required to fill the orders. Generally this can only be
+achieved by interacting with an external liquidity source that is
+offering a better price than the orders require.</p>
+<pre><code class="language-solidity">function _exchange(TakeOrdersConfig memory takeOrders, bytes memory exchangeData) internal virtual;
+</code></pre>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>takeOrders</code></td><td><code>TakeOrdersConfig</code></td><td>As per <code>arb</code>.</td></tr>
+<tr><td><code>exchangeData</code></td><td><code>bytes</code></td><td>As per <code>arb</code>.</td></tr>
+</tbody></table>
+</div>
+<h3 id="onflashloan"><a class="header" href="#onflashloan">onFlashLoan</a></h3>
+<p><em>Receive a flash loan.</em></p>
+<pre><code class="language-solidity">function onFlashLoan(address initiator, address, uint256, uint256, bytes calldata data)
+    external
+    onlyNotInitializing
+    returns (bytes32);
+</code></pre>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>initiator</code></td><td><code>address</code></td><td>The initiator of the loan.</td></tr>
+<tr><td><code>&lt;none&gt;</code></td><td><code>address</code></td><td></td></tr>
+<tr><td><code>&lt;none&gt;</code></td><td><code>uint256</code></td><td></td></tr>
+<tr><td><code>&lt;none&gt;</code></td><td><code>uint256</code></td><td></td></tr>
+<tr><td><code>data</code></td><td><code>bytes</code></td><td>Arbitrary data structure, intended to contain user-defined parameters.</td></tr>
+</tbody></table>
+</div>
+<p><strong>Returns</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>&lt;none&gt;</code></td><td><code>bytes32</code></td><td>The keccak256 hash of &quot;ERC3156FlashBorrower.onFlashLoan&quot;</td></tr>
+</tbody></table>
+</div>
+<h3 id="arb"><a class="header" href="#arb">arb</a></h3>
+<p>Primary function to process arbitrage opportunities.
+Firstly the access gate is evaluated to ensure the sender is allowed to
+submit arbitrage. If there is no access control the sender should expect
+to be front run on the arb for any sufficiently profitable opportunity.
+This may be desirable in some cases, as the sender may simply want to
+be clearing the orderbook and they are expecting profit/utility from the
+orderbook strategies themselves somehow.
+Secondly the flash loan is taken and the <code>_exchange</code> hook is called to
+allow the inheriting contract to convert the flash loaned assets into
+the assets required to fill the orders.
+Finally the orders are taken and the remaining assets are sent to the
+sender.</p>
+<pre><code class="language-solidity">function arb(TakeOrdersConfig calldata takeOrders, uint256 minimumSenderOutput, bytes calldata exchangeData)
+    external
+    nonReentrant
+    onlyNotInitializing;
+</code></pre>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>takeOrders</code></td><td><code>TakeOrdersConfig</code></td><td>As per <code>IOrderBookV2.takeOrders</code>.</td></tr>
+<tr><td><code>minimumSenderOutput</code></td><td><code>uint256</code></td><td>The minimum output that must be sent to the sender by the end of the arb call. This, in combination with the orderbook's own asset handling, is expected to REPLACE the standard slippage protection that would be provided by a DEX. The sender is expected to calculate absolute values based on prevailing conditions such as gas price and the risk of holding the assets any arb profit is denominated in.</td></tr>
+<tr><td><code>exchangeData</code></td><td><code>bytes</code></td><td>Arbitrary bytes that will be passed to <code>_exchange</code> after the flash loan is taken. The inheriting contract is responsible for decoding this data and defining how it controls interactions with the external liquidity. For example, <code>GenericPoolOrderBookFlashBorrower</code> uses this data as a literal encoded external call.</td></tr>
+</tbody></table>
+</div>
+<h2 id="events"><a class="header" href="#events">Events</a></h2>
+<h3 id="initialize-2"><a class="header" href="#initialize-2">Initialize</a></h3>
+<p>Emitted when the contract is initialized. Contains the
+OrderBookFlashBorrowerConfig struct to ensure the type appears in the
+ABI.</p>
+<pre><code class="language-solidity">event Initialize(address sender, OrderBookFlashBorrowerConfig config);
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="constants"><a class="header" href="#constants">Constants</a></h1>
+<p><a href="https://github.com/rainprotocol/rain.orderbook/blob/bc1ef8bda6d1f1c6857ff284f17d6369cd1c4dbe/src/abstract/OrderBookFlashBorrower.sol">Git Source</a></p>
+<h3 id="before_arb_source_index"><a class="header" href="#before_arb_source_index">BEFORE_ARB_SOURCE_INDEX</a></h3>
+<p><em>&quot;Before arb&quot; is evaluated before the flash loan is taken. Ostensibly
+allows for some kind of access control to the arb.</em></p>
+<pre><code class="language-solidity">SourceIndex constant BEFORE_ARB_SOURCE_INDEX = SourceIndex.wrap(0);
+</code></pre>
+<h3 id="before_arb_min_outputs"><a class="header" href="#before_arb_min_outputs">BEFORE_ARB_MIN_OUTPUTS</a></h3>
+<p><em>&quot;Before arb&quot; has no outputs.</em></p>
+<pre><code class="language-solidity">uint256 constant BEFORE_ARB_MIN_OUTPUTS = 0;
+</code></pre>
+<h3 id="before_arb_max_outputs"><a class="header" href="#before_arb_max_outputs">BEFORE_ARB_MAX_OUTPUTS</a></h3>
+<p><em>&quot;Before arb&quot; has no outputs.</em></p>
+<pre><code class="language-solidity">uint16 constant BEFORE_ARB_MAX_OUTPUTS = 0;
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="zerotoken"><a class="header" href="#zerotoken">ZeroToken</a></h1>
+<p><a href="https://github.com/rainprotocol/rain.orderbook/blob/bc1ef8bda6d1f1c6857ff284f17d6369cd1c4dbe/src/abstract/OrderBookFlashLender.sol">Git Source</a></p>
+<p>Thrown when <code>flashLoan</code> token is zero address.</p>
+<pre><code class="language-solidity">error ZeroToken();
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="zeroreceiver"><a class="header" href="#zeroreceiver">ZeroReceiver</a></h1>
+<p><a href="https://github.com/rainprotocol/rain.orderbook/blob/bc1ef8bda6d1f1c6857ff284f17d6369cd1c4dbe/src/abstract/OrderBookFlashLender.sol">Git Source</a></p>
+<p>Thrown when <code>flashLoan</code> receiver is zero address.</p>
+<pre><code class="language-solidity">error ZeroReceiver();
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="zeroamount"><a class="header" href="#zeroamount">ZeroAmount</a></h1>
+<p><a href="https://github.com/rainprotocol/rain.orderbook/blob/bc1ef8bda6d1f1c6857ff284f17d6369cd1c4dbe/src/abstract/OrderBookFlashLender.sol">Git Source</a></p>
+<p>Thrown when <code>flashLoan</code> amount is zero.</p>
+<pre><code class="language-solidity">error ZeroAmount();
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="flashlendercallbackfailed"><a class="header" href="#flashlendercallbackfailed">FlashLenderCallbackFailed</a></h1>
+<p><a href="https://github.com/rainprotocol/rain.orderbook/blob/bc1ef8bda6d1f1c6857ff284f17d6369cd1c4dbe/src/abstract/OrderBookFlashLender.sol">Git Source</a></p>
+<p>Thrown when the <code>onFlashLoan</code> callback returns anything other than
+ON_FLASH_LOAN_CALLBACK_SUCCESS.</p>
+<pre><code class="language-solidity">error FlashLenderCallbackFailed(bytes32 result);
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="activedebt"><a class="header" href="#activedebt">ActiveDebt</a></h1>
+<p><a href="https://github.com/rainprotocol/rain.orderbook/blob/bc1ef8bda6d1f1c6857ff284f17d6369cd1c4dbe/src/abstract/OrderBookFlashLender.sol">Git Source</a></p>
+<p>Thrown when more than one debt is attempted simultaneously.</p>
+<pre><code class="language-solidity">error ActiveDebt(address receiver, address token, uint256 amount);
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="orderbookflashlender"><a class="header" href="#orderbookflashlender">OrderBookFlashLender</a></h1>
+<p><a href="https://github.com/rainprotocol/rain.orderbook/blob/bc1ef8bda6d1f1c6857ff284f17d6369cd1c4dbe/src/abstract/OrderBookFlashLender.sol">Git Source</a></p>
+<p><strong>Inherits:</strong>
+<a href="src/abstract/OrderBookFlashLender.sol//src/interface/ierc3156/IERC3156FlashLender.sol/interface.IERC3156FlashLender.html">IERC3156FlashLender</a></p>
+<p>Implements <code>IERC3156FlashLender</code> for <code>OrderBook</code>. Based on the
+reference implementation by Alberto Cuesta Cañada found at
+https://eips.ethereum.org/EIPS/eip-3156
+Several features found in the reference implementation are simplified or
+hardcoded for <code>Orderbook</code>.</p>
+<h2 id="state-variables-1"><a class="header" href="#state-variables-1">State Variables</a></h2>
+<h3 id="_sreceiver"><a class="header" href="#_sreceiver">_sReceiver</a></h3>
+<pre><code class="language-solidity">IERC3156FlashBorrower private _sReceiver = IERC3156FlashBorrower(address(0));
+</code></pre>
+<h3 id="_stoken"><a class="header" href="#_stoken">_sToken</a></h3>
+<pre><code class="language-solidity">address private _sToken = address(0);
+</code></pre>
+<h3 id="_samountunpaid"><a class="header" href="#_samountunpaid">_sAmountUnpaid</a></h3>
+<pre><code class="language-solidity">uint256 private _sAmountUnpaid = 0;
+</code></pre>
+<h2 id="functions-1"><a class="header" href="#functions-1">Functions</a></h2>
+<h3 id="_isactivedebt"><a class="header" href="#_isactivedebt">_isActiveDebt</a></h3>
+<p>If any of the debt related storage values are set then we consider a
+debt active. Notably the debt is still active even if the amount unpaid
+is zero, until the loan originating <code>flashLoan</code> call fully completes.</p>
+<pre><code class="language-solidity">function _isActiveDebt() internal view returns (bool);
+</code></pre>
+<h3 id="_checkactivedebt"><a class="header" href="#_checkactivedebt">_checkActiveDebt</a></h3>
+<pre><code class="language-solidity">function _checkActiveDebt() internal view;
+</code></pre>
+<h3 id="_decreaseflashdebtthensendtoken"><a class="header" href="#_decreaseflashdebtthensendtoken">_decreaseFlashDebtThenSendToken</a></h3>
+<p>Whenever <code>Orderbook</code> sends tokens to any address it MUST first attempt
+to decrease any outstanding flash loans for that address. Consider the
+case that Alice deposits 100 TKN and she is the only depositor of TKN
+then flash borrows 100 TKN. If she attempts to withdraw 100 TKN during
+her <code>onFlashLoan</code> callback then <code>Orderbook</code>:</p>
+<ul>
+<li>has 0 TKN balance to process the withdrawal</li>
+<li>MUST process the withdrawal as Alice has the right to withdraw her
+balance at any time</li>
+<li>Has the 100 TKN debt active under Alice
+In this case <code>Orderbook</code> can simply forgive Alice's 100 TKN debt instead
+of actually transferring any tokens. The withdrawal can decrease her
+vault balance by 100 TKN decoupled from needing to know whether a
+tranfer or forgiveness happened.
+The same logic applies to withdrawals as sending tokens during
+<code>takeOrders</code> as the reason for sending tokens is irrelevant, all that
+matters is that <code>Orderbook</code> prioritises debt repayments over external
+transfers.
+If there is an active debt that only partially eclipses the withdrawal
+then the debt will be fully repaid and the remainder transferred as a
+real token transfer.
+Note that Alice can still contrive a situation that causes <code>Orderbook</code>
+to attempt to send tokens that it does not have. If Alice can write a
+smart contract to trigger withdrawals she can flash loan 100% of the
+TKN supply in <code>Orderbook</code> and trigger her contract to attempt a
+withdrawal. For any normal ERC20 token this will fail and revert as the
+<code>Orderbook</code> cannot send tokens it does not have under any circumstances,
+but the scenario is worth being aware of for more exotic token
+behaviours that may not be supported.</li>
+</ul>
+<pre><code class="language-solidity">function _decreaseFlashDebtThenSendToken(address token, address receiver, uint256 sendAmount) internal;
+</code></pre>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>token</code></td><td><code>address</code></td><td>The token being sent or for the debt being paid.</td></tr>
+<tr><td><code>receiver</code></td><td><code>address</code></td><td>The receiver of the token or holder of the debt.</td></tr>
+<tr><td><code>sendAmount</code></td><td><code>uint256</code></td><td>The amount to send or repay.</td></tr>
+</tbody></table>
+</div>
+<h3 id="flashloan"><a class="header" href="#flashloan">flashLoan</a></h3>
+<p><em>Initiate a flash loan.</em></p>
+<pre><code class="language-solidity">function flashLoan(IERC3156FlashBorrower receiver, address token, uint256 amount, bytes calldata data)
+    external
+    override
+    returns (bool);
+</code></pre>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>receiver</code></td><td><code>IERC3156FlashBorrower</code></td><td>The receiver of the tokens in the loan, and the receiver of the callback.</td></tr>
+<tr><td><code>token</code></td><td><code>address</code></td><td>The loan currency.</td></tr>
+<tr><td><code>amount</code></td><td><code>uint256</code></td><td>The amount of tokens lent.</td></tr>
+<tr><td><code>data</code></td><td><code>bytes</code></td><td>Arbitrary data structure, intended to contain user-defined parameters.</td></tr>
+</tbody></table>
+</div>
+<h3 id="flashfee"><a class="header" href="#flashfee">flashFee</a></h3>
+<p><em>The fee to be charged for a given loan.</em></p>
+<pre><code class="language-solidity">function flashFee(address, uint256) external pure override returns (uint256);
+</code></pre>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>&lt;none&gt;</code></td><td><code>address</code></td><td></td></tr>
+<tr><td><code>&lt;none&gt;</code></td><td><code>uint256</code></td><td></td></tr>
+</tbody></table>
+</div>
+<p><strong>Returns</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>&lt;none&gt;</code></td><td><code>uint256</code></td><td>The amount of <code>token</code> to be charged for the loan, on top of the returned principal.</td></tr>
+</tbody></table>
+</div>
+<h3 id="maxflashloan"><a class="header" href="#maxflashloan">maxFlashLoan</a></h3>
+<p>There's no limit to the size of a flash loan from <code>Orderbook</code> other than
+the current tokens deposited in <code>Orderbook</code>. If there is an active debt
+then loans are disabled so the max becomes <code>0</code> until after repayment.</p>
+<p><em>The amount of currency available to be lent.</em></p>
+<pre><code class="language-solidity">function maxFlashLoan(address token) external view override returns (uint256);
+</code></pre>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>token</code></td><td><code>address</code></td><td>The loan currency.</td></tr>
+</tbody></table>
+</div>
+<p><strong>Returns</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>&lt;none&gt;</code></td><td><code>uint256</code></td><td>The amount of <code>token</code> that can be borrowed.</td></tr>
+</tbody></table>
+</div><div style="break-before: page; page-break-before: always;"></div><h1 id="constants-1"><a class="header" href="#constants-1">Constants</a></h1>
+<p><a href="https://github.com/rainprotocol/rain.orderbook/blob/bc1ef8bda6d1f1c6857ff284f17d6369cd1c4dbe/src/abstract/OrderBookFlashLender.sol">Git Source</a></p>
+<h3 id="flash_fee"><a class="header" href="#flash_fee">FLASH_FEE</a></h3>
+<p><em>Flash fee is always 0 for orderbook as there's no entity to take
+revenue for <code>Orderbook</code> and its more important anyway that flashloans happen
+to connect external liquidity to live orders via arbitrage.</em></p>
+<pre><code class="language-solidity">uint256 constant FLASH_FEE = 0;
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="contents-1"><a class="header" href="#contents-1">Contents</a></h1>
+<ul>
+<li><a href="src/concrete/GenericPoolOrderBookFlashBorrower.sol/contract.GenericPoolOrderBookFlashBorrower.html">GenericPoolOrderBookFlashBorrower</a></li>
+<li><a href="src/concrete/GenericPoolOrderBookFlashBorrower.sol/constants.GenericPoolOrderBookFlashBorrower.html">GenericPoolOrderBookFlashBorrower constants</a></li>
+<li><a href="src/concrete/OrderBook.sol/error.ReentrancyGuardReentrantCall.html">ReentrancyGuardReentrantCall</a></li>
+<li><a href="src/concrete/OrderBook.sol/error.NotOrderOwner.html">NotOrderOwner</a></li>
+<li><a href="src/concrete/OrderBook.sol/error.TokenMismatch.html">TokenMismatch</a></li>
+<li><a href="src/concrete/OrderBook.sol/error.MinimumInput.html">MinimumInput</a></li>
+<li><a href="src/concrete/OrderBook.sol/error.SameOwner.html">SameOwner</a></li>
+<li><a href="src/concrete/OrderBook.sol/contract.OrderBook.html">OrderBook</a></li>
+<li><a href="src/concrete/OrderBook.sol/constants.OrderBook.html">OrderBook constants</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="genericpoolorderbookflashborrower"><a class="header" href="#genericpoolorderbookflashborrower">GenericPoolOrderBookFlashBorrower</a></h1>
+<p><a href="https://github.com/rainprotocol/rain.orderbook/blob/bc1ef8bda6d1f1c6857ff284f17d6369cd1c4dbe/src/concrete/GenericPoolOrderBookFlashBorrower.sol">Git Source</a></p>
+<p><strong>Inherits:</strong>
+<a href="src/concrete/GenericPoolOrderBookFlashBorrower.sol//src/abstract/OrderBookFlashBorrower.sol/abstract.OrderBookFlashBorrower.html">OrderBookFlashBorrower</a></p>
+<h2 id="functions-2"><a class="header" href="#functions-2">Functions</a></h2>
+<h3 id="constructor-1"><a class="header" href="#constructor-1">constructor</a></h3>
+<pre><code class="language-solidity">constructor(DeployerDiscoverableMetaV1ConstructionConfig memory config)
+    OrderBookFlashBorrower(CALLER_META_HASH, config);
+</code></pre>
+<h3 id="_exchange-1"><a class="header" href="#_exchange-1">_exchange</a></h3>
+<p>Hook that inheriting contracts MUST implement in order to achieve
+anything other than raising the ambient temperature of the room.
+<code>_exchange</code> is responsible for converting the flash loaned assets into
+the assets required to fill the orders. Generally this can only be
+achieved by interacting with an external liquidity source that is
+offering a better price than the orders require.</p>
+<pre><code class="language-solidity">function _exchange(TakeOrdersConfig memory takeOrders, bytes memory exchangeData) internal virtual override;
+</code></pre>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>takeOrders</code></td><td><code>TakeOrdersConfig</code></td><td>As per <code>arb</code>.</td></tr>
+<tr><td><code>exchangeData</code></td><td><code>bytes</code></td><td>As per <code>arb</code>.</td></tr>
+</tbody></table>
+</div>
+<h3 id="fallback"><a class="header" href="#fallback">fallback</a></h3>
+<p>Allow receiving gas.</p>
+<pre><code class="language-solidity">fallback() external onlyNotInitializing;
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="constants-2"><a class="header" href="#constants-2">Constants</a></h1>
+<p><a href="https://github.com/rainprotocol/rain.orderbook/blob/bc1ef8bda6d1f1c6857ff284f17d6369cd1c4dbe/src/concrete/GenericPoolOrderBookFlashBorrower.sol">Git Source</a></p>
+<h3 id="caller_meta_hash"><a class="header" href="#caller_meta_hash">CALLER_META_HASH</a></h3>
+<p>*Metadata hash for <code>DeployerDiscoverableMetaV1</code>.</p>
+<ul>
+<li>ABI for GenericPoolOrderBookFlashBorrower</li>
+<li>Interpreter caller metadata V1 for GenericPoolOrderBookFlashBorrower*</li>
+</ul>
+<pre><code class="language-solidity">bytes32 constant CALLER_META_HASH = bytes32(0xa62ee776c94e335a2d59a5fa7d87ae282b35af1370107165adafe3464270a852);
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="reentrancyguardreentrantcall"><a class="header" href="#reentrancyguardreentrantcall">ReentrancyGuardReentrantCall</a></h1>
+<p><a href="https://github.com/rainprotocol/rain.orderbook/blob/bc1ef8bda6d1f1c6857ff284f17d6369cd1c4dbe/src/concrete/OrderBook.sol">Git Source</a></p>
+<p>This will exist in a future version of Open Zeppelin if their main branch is
+to be believed.</p>
+<pre><code class="language-solidity">error ReentrancyGuardReentrantCall();
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="notorderowner"><a class="header" href="#notorderowner">NotOrderOwner</a></h1>
+<p><a href="https://github.com/rainprotocol/rain.orderbook/blob/bc1ef8bda6d1f1c6857ff284f17d6369cd1c4dbe/src/concrete/OrderBook.sol">Git Source</a></p>
+<p>Thrown when the <code>msg.sender</code> modifying an order is not its owner.</p>
+<pre><code class="language-solidity">error NotOrderOwner(address sender, address owner);
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="tokenmismatch"><a class="header" href="#tokenmismatch">TokenMismatch</a></h1>
+<p><a href="https://github.com/rainprotocol/rain.orderbook/blob/bc1ef8bda6d1f1c6857ff284f17d6369cd1c4dbe/src/concrete/OrderBook.sol">Git Source</a></p>
+<p>Thrown when the input and output tokens don't match, in either direction.</p>
+<pre><code class="language-solidity">error TokenMismatch(address aliceToken, address bobToken);
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="minimuminput"><a class="header" href="#minimuminput">MinimumInput</a></h1>
+<p><a href="https://github.com/rainprotocol/rain.orderbook/blob/bc1ef8bda6d1f1c6857ff284f17d6369cd1c4dbe/src/concrete/OrderBook.sol">Git Source</a></p>
+<p>Thrown when the minimum input is not met.</p>
+<pre><code class="language-solidity">error MinimumInput(uint256 minimumInput, uint256 input);
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="sameowner"><a class="header" href="#sameowner">SameOwner</a></h1>
+<p><a href="https://github.com/rainprotocol/rain.orderbook/blob/bc1ef8bda6d1f1c6857ff284f17d6369cd1c4dbe/src/concrete/OrderBook.sol">Git Source</a></p>
+<p>Thrown when two orders have the same owner during clear.</p>
+<pre><code class="language-solidity">error SameOwner(address owner);
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="orderbook"><a class="header" href="#orderbook">OrderBook</a></h1>
+<p><a href="https://github.com/rainprotocol/rain.orderbook/blob/bc1ef8bda6d1f1c6857ff284f17d6369cd1c4dbe/src/concrete/OrderBook.sol">Git Source</a></p>
+<p><strong>Inherits:</strong>
+<a href="src/concrete/OrderBook.sol//src/interface/unstable/IOrderBookV3.sol/interface.IOrderBookV3.html">IOrderBookV3</a>, ReentrancyGuard, Multicall, <a href="src/concrete/OrderBook.sol//src/abstract/OrderBookFlashLender.sol/abstract.OrderBookFlashLender.html">OrderBookFlashLender</a>, DeployerDiscoverableMetaV1</p>
+<h2 id="state-variables-2"><a class="header" href="#state-variables-2">State Variables</a></h2>
+<h3 id="sorders"><a class="header" href="#sorders">sOrders</a></h3>
+<p>All hashes of all active orders. There's nothing interesting in the value
+it's just nonzero if the order is live. The key is the hash of the order.
+Removing an order sets the value back to zero so it is identical to the
+order never existing and gives a gas refund on removal.
+The order hash includes its owner so there's no need to build a multi
+level mapping, each order hash MUST uniquely identify the order globally.
+order hash =&gt; order is live</p>
+<pre><code class="language-solidity">mapping(uint256 =&gt; uint256) internal sOrders;
+</code></pre>
+<h3 id="svaultbalances"><a class="header" href="#svaultbalances">sVaultBalances</a></h3>
+<p><em>Vault balances are stored in a mapping of owner =&gt; token =&gt; vault ID
+This gives 1:1 parity with the <code>IOrderBookV1</code> interface but keeping the
+<code>sFoo</code> naming convention for storage variables.</em></p>
+<pre><code class="language-solidity">mapping(address =&gt; mapping(address =&gt; mapping(uint256 =&gt; uint256))) internal sVaultBalances;
+</code></pre>
+<h2 id="functions-3"><a class="header" href="#functions-3">Functions</a></h2>
+<h3 id="constructor-2"><a class="header" href="#constructor-2">constructor</a></h3>
+<p>Initializes the orderbook upon construction for compatibility with
+Open Zeppelin upgradeable contracts. Orderbook itself does NOT support
+factory deployments as each order is a unique expression deployment
+rather than needing to wrap up expressions with proxies.</p>
+<pre><code class="language-solidity">constructor(DeployerDiscoverableMetaV1ConstructionConfig memory config)
+    DeployerDiscoverableMetaV1(CALLER_META_HASH, config);
+</code></pre>
+<h3 id="nonreentrantview"><a class="header" href="#nonreentrantview">nonReentrantView</a></h3>
+<p>Guard against read-only reentrancy.
+https://chainsecurity.com/heartbreaks-curve-lp-oracles/</p>
+<pre><code class="language-solidity">modifier nonReentrantView();
+</code></pre>
+<h3 id="vaultbalance"><a class="header" href="#vaultbalance">vaultBalance</a></h3>
+<p>Get the current balance of a vault for a given owner, token and vault ID.</p>
+<pre><code class="language-solidity">function vaultBalance(address owner, address token, uint256 vaultId)
+    external
+    view
+    override
+    nonReentrantView
+    returns (uint256);
+</code></pre>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>owner</code></td><td><code>address</code></td><td>The owner of the vault.</td></tr>
+<tr><td><code>token</code></td><td><code>address</code></td><td>The token the vault is for.</td></tr>
+<tr><td><code>vaultId</code></td><td><code>uint256</code></td><td></td></tr>
+</tbody></table>
+</div>
+<p><strong>Returns</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>&lt;none&gt;</code></td><td><code>uint256</code></td><td>balance The current balance of the vault.</td></tr>
+</tbody></table>
+</div>
+<h3 id="deposit"><a class="header" href="#deposit">deposit</a></h3>
+<p><code>msg.sender</code> deposits tokens according to config. The config specifies
+the vault to deposit tokens under. Delegated depositing is NOT supported.
+Depositing DOES NOT mint shares (unlike ERC4626) so the overall vaulted
+experience is much simpler as there is always a 1:1 relationship between
+deposited assets and vault balances globally and individually. This
+mitigates rounding/dust issues, speculative behaviour on derived assets,
+possible regulatory issues re: whether a vault share is a security, code
+bloat on the vault, complex mint/deposit/withdraw/redeem 4-way logic,
+the need for preview functions, etc. etc.
+At the same time, allowing vault IDs to be specified by the depositor
+allows much more granular and direct control over token movements within
+Orderbook than either ERC4626 vault shares or mere contract-level ERC20
+allowances can facilitate.
+Vault IDs are namespaced by the token address so there is no risk of
+collision between tokens. For example, vault ID 0 for token A is
+completely different to vault ID 0 for token B.
+<code>0</code> amount deposits are unsupported as underlying token contracts
+handle <code>0</code> value transfers differently and this would be a source of
+confusion. The order book MUST revert with <code>ZeroDepositAmount</code> if the
+amount is zero.</p>
+<pre><code class="language-solidity">function deposit(address token, uint256 vaultId, uint256 amount) external nonReentrant;
+</code></pre>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>token</code></td><td><code>address</code></td><td>The token to deposit.</td></tr>
+<tr><td><code>vaultId</code></td><td><code>uint256</code></td><td>The vault ID to deposit under.</td></tr>
+<tr><td><code>amount</code></td><td><code>uint256</code></td><td>The amount of tokens to deposit.</td></tr>
+</tbody></table>
+</div>
+<h3 id="withdraw"><a class="header" href="#withdraw">withdraw</a></h3>
+<p>Allows the sender to withdraw any tokens from their own vaults. If the
+withrawer has an active flash loan debt denominated in the same token
+being withdrawn then Orderbook will merely reduce the debt and NOT send
+the amount of tokens repaid to the flashloan debt.</p>
+<pre><code class="language-solidity">function withdraw(address token, uint256 vaultId, uint256 targetAmount) external nonReentrant;
+</code></pre>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>token</code></td><td><code>address</code></td><td>The token to withdraw.</td></tr>
+<tr><td><code>vaultId</code></td><td><code>uint256</code></td><td>The vault ID to withdraw from.</td></tr>
+<tr><td><code>targetAmount</code></td><td><code>uint256</code></td><td>The amount of tokens to attempt to withdraw. MAY result in fewer tokens withdrawn if the vault balance is lower than the target amount. MAY NOT be zero, the order book MUST revert with <code>ZeroWithdrawTargetAmount</code> if the amount is zero.</td></tr>
+</tbody></table>
+</div>
+<h3 id="addorder"><a class="header" href="#addorder">addOrder</a></h3>
+<p>Given an order config, deploys the expression and builds the full <code>Order</code>
+for the config, then records it as an active order. Delegated adding an
+order is NOT supported. The <code>msg.sender</code> that adds an order is ALWAYS
+the owner and all resulting vault movements are their own.</p>
+<pre><code class="language-solidity">function addOrder(OrderConfig calldata config) external nonReentrant;
+</code></pre>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>config</code></td><td><code>OrderConfig</code></td><td>All config required to build an <code>Order</code>.</td></tr>
+</tbody></table>
+</div>
+<h3 id="_calculateorderdispatch"><a class="header" href="#_calculateorderdispatch">_calculateOrderDispatch</a></h3>
+<pre><code class="language-solidity">function _calculateOrderDispatch(address expression_) internal pure returns (EncodedDispatch);
+</code></pre>
+<h3 id="_handleiodispatch"><a class="header" href="#_handleiodispatch">_handleIODispatch</a></h3>
+<pre><code class="language-solidity">function _handleIODispatch(address expression_) internal pure returns (EncodedDispatch);
+</code></pre>
+<h3 id="removeorder"><a class="header" href="#removeorder">removeOrder</a></h3>
+<p>Order owner can remove their own orders. Delegated order removal is NOT
+supported and will revert. Removing an order multiple times or removing
+an order that never existed are valid, the event will be emitted and the
+transaction will complete with that order hash definitely, redundantly
+not live.</p>
+<pre><code class="language-solidity">function removeOrder(Order calldata order_) external nonReentrant;
+</code></pre>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>order_</code></td><td><code>Order</code></td><td></td></tr>
+</tbody></table>
+</div>
+<h3 id="takeorders"><a class="header" href="#takeorders">takeOrders</a></h3>
+<p>Allows <code>msg.sender</code> to attempt to fill a list of orders in sequence
+without needing to place their own order and clear them. This works like
+a market buy but against a specific set of orders. Every order will
+looped over and calculated individually then filled maximally until the
+request input is reached for the <code>msg.sender</code>. The <code>msg.sender</code> is
+responsible for selecting the best orders at the time according to their
+criteria and MAY specify a maximum IO ratio to guard against an order
+spiking the ratio beyond what the <code>msg.sender</code> expected and is
+comfortable with. As orders may be removed and calculate their ratios
+dynamically, all issues fulfilling an order other than misconfiguration
+by the <code>msg.sender</code> are no-ops and DO NOT revert the transaction. This
+allows the <code>msg.sender</code> to optimistically provide a list of orders that
+they aren't sure will completely fill at a good price, and fallback to
+more reliable orders further down their list. Misconfiguration such as
+token mismatches are errors that revert as this is known and static at
+all times to the <code>msg.sender</code> so MUST be provided correctly. <code>msg.sender</code>
+MAY specify a minimum input that MUST be reached across all orders in the
+list, otherwise the transaction will revert, this MAY be set to zero.
+Exactly like withdraw, if there is an active flash loan for <code>msg.sender</code>
+they will have their outstanding loan reduced by the final input amount
+preferentially before sending any tokens. Notably this allows arb bots
+implemented as flash loan borrowers to connect orders against external
+liquidity directly by paying back the loan with a <code>takeOrders</code> call and
+outputting the result of the external trade.
+Rounding errors always favour the order never the <code>msg.sender</code>.</p>
+<pre><code class="language-solidity">function takeOrders(TakeOrdersConfig calldata takeOrders_)
+    external
+    nonReentrant
+    returns (uint256 totalInput_, uint256 totalOutput_);
+</code></pre>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>takeOrders_</code></td><td><code>TakeOrdersConfig</code></td><td></td></tr>
+</tbody></table>
+</div>
+<p><strong>Returns</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>totalInput_</code></td><td><code>uint256</code></td><td>totalInput Total tokens sent to <code>msg.sender</code>, taken from order vaults processed.</td></tr>
+<tr><td><code>totalOutput_</code></td><td><code>uint256</code></td><td>totalOutput Total tokens taken from <code>msg.sender</code> and distributed between vaults.</td></tr>
+</tbody></table>
+</div>
+<h3 id="clear"><a class="header" href="#clear">clear</a></h3>
+<p>Allows <code>msg.sender</code> to match two live orders placed earlier by
+non-interactive parties and claim a bounty in the process. The clearer is
+free to select any two live orders on the order book for matching and as
+long as they have compatible tokens, ratios and amounts, the orders will
+clear. Clearing the orders DOES NOT remove them from the orderbook, they
+remain live until explicitly removed by their owner. Even if the input
+vault balances are completely emptied, the orders remain live until
+removed. This allows order owners to deploy a strategy over a long period
+of time and periodically top up the input vaults. Clearing two orders
+from the same owner is disallowed.
+Any mismatch in the ratios between the two orders will cause either more
+inputs than there are available outputs (transaction will revert) or less
+inputs than there are available outputs. In the latter case the excess
+outputs are given to the <code>msg.sender</code> of clear, to the vaults they
+specify in the clear config. This not only incentivises &quot;automatic&quot; clear
+calls for both alice and bob, but incentivises <em>prioritising greater
+ratio differences</em> with a larger bounty. The second point is important
+because it implicitly prioritises orders that are further from the
+current market price, thus putting constant increasing pressure on the
+entire system the further it drifts from the norm, no matter how esoteric
+the individual order expressions and sizings might be.
+All else equal there are several factors that would impact how reliably
+some order clears relative to the wider market, such as:</p>
+<ul>
+<li>Bounties are effectively percentages of cleared amounts so larger
+orders have larger bounties and cover gas costs more easily</li>
+<li>High gas on the network means that orders are harder to clear
+profitably so the negative spread of the ratios will need to be larger</li>
+<li>Complex and stateful expressions cost more gas to evalulate so the
+negative spread will need to be larger</li>
+<li>Erratic behavior of the order owner could reduce the willingness of
+third parties to interact if it could result in wasted gas due to
+orders suddently being removed before clearance etc.</li>
+<li>Dynamic and highly volatile words used in the expression could be
+ignored or low priority by clearers who want to be sure that they can
+accurately predict the ratios that they include in their clearance</li>
+<li>Geopolitical issues such as sanctions and regulatory restrictions could
+cause issues for certain owners and clearers</li>
+</ul>
+<pre><code class="language-solidity">function clear(
+    Order memory alice_,
+    Order memory bob_,
+    ClearConfig calldata clearConfig_,
+    SignedContextV1[] memory aliceSignedContext_,
+    SignedContextV1[] memory bobSignedContext_
+) external nonReentrant;
+</code></pre>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>alice_</code></td><td><code>Order</code></td><td></td></tr>
+<tr><td><code>bob_</code></td><td><code>Order</code></td><td></td></tr>
+<tr><td><code>clearConfig_</code></td><td><code>ClearConfig</code></td><td></td></tr>
+<tr><td><code>aliceSignedContext_</code></td><td><code>SignedContextV1[]</code></td><td></td></tr>
+<tr><td><code>bobSignedContext_</code></td><td><code>SignedContextV1[]</code></td><td></td></tr>
+</tbody></table>
+</div>
+<h3 id="_calculateorderio"><a class="header" href="#_calculateorderio">_calculateOrderIO</a></h3>
+<p>Main entrypoint into an order calculates the amount and IO ratio. Both
+are always treated as 18 decimal fixed point values and then rescaled
+according to the order's definition of each token's actual fixed point
+decimals.</p>
+<pre><code class="language-solidity">function _calculateOrderIO(
+    Order memory order,
+    uint256 inputIOIndex,
+    uint256 outputIOIndex,
+    address counterparty,
+    SignedContextV1[] memory signedContext
+) internal view virtual returns (OrderIOCalculation memory);
+</code></pre>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>order</code></td><td><code>Order</code></td><td>The order to evaluate.</td></tr>
+<tr><td><code>inputIOIndex</code></td><td><code>uint256</code></td><td>The index of the input token being calculated for.</td></tr>
+<tr><td><code>outputIOIndex</code></td><td><code>uint256</code></td><td>The index of the output token being calculated for.</td></tr>
+<tr><td><code>counterparty</code></td><td><code>address</code></td><td>The counterparty of the order as it is currently being cleared against.</td></tr>
+<tr><td><code>signedContext</code></td><td><code>SignedContextV1[]</code></td><td>Any signed context provided by the clearer/taker that the order may need for its calculations.</td></tr>
+</tbody></table>
+</div>
+<h3 id="_recordvaultio"><a class="header" href="#_recordvaultio">_recordVaultIO</a></h3>
+<p>Given an order, final input and output amounts and the IO calculation
+verbatim from <code>_calculateOrderIO</code>, dispatch the handle IO entrypoint if
+it exists and update the order owner's vault balances.</p>
+<pre><code class="language-solidity">function _recordVaultIO(Order memory order, uint256 input, uint256 output, OrderIOCalculation memory orderIOCalculation)
+    internal
+    virtual;
+</code></pre>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>order</code></td><td><code>Order</code></td><td>The order that is being cleared.</td></tr>
+<tr><td><code>input</code></td><td><code>uint256</code></td><td>The exact token input amount to move into the owner's vault.</td></tr>
+<tr><td><code>output</code></td><td><code>uint256</code></td><td>The exact token output amount to move out of the owner's vault.</td></tr>
+<tr><td><code>orderIOCalculation</code></td><td><code>OrderIOCalculation</code></td><td>The verbatim order IO calculation returned by <code>_calculateOrderIO</code>.</td></tr>
+</tbody></table>
+</div><div style="break-before: page; page-break-before: always;"></div><h1 id="constants-3"><a class="header" href="#constants-3">Constants</a></h1>
+<p><a href="https://github.com/rainprotocol/rain.orderbook/blob/bc1ef8bda6d1f1c6857ff284f17d6369cd1c4dbe/src/concrete/OrderBook.sol">Git Source</a></p>
+<h3 id="caller_meta_hash-1"><a class="header" href="#caller_meta_hash-1">CALLER_META_HASH</a></h3>
+<p><em>Hash of the caller contract metadata for construction.</em></p>
+<pre><code class="language-solidity">bytes32 constant CALLER_META_HASH = bytes32(0xccb725aa09e1c62951d95bc8e34abc49b4678da5b64bb75c366054659b3f3b3b);
+</code></pre>
+<h3 id="live_order"><a class="header" href="#live_order">LIVE_ORDER</a></h3>
+<p><em>Value that signifies that an order is live in the internal mapping.
+Anything nonzero is equally useful.</em></p>
+<pre><code class="language-solidity">uint256 constant LIVE_ORDER = 1;
+</code></pre>
+<h3 id="dead_order"><a class="header" href="#dead_order">DEAD_ORDER</a></h3>
+<p><em>Value that signifies that an order is dead in the internal mapping.</em></p>
+<pre><code class="language-solidity">uint256 constant DEAD_ORDER = 0;
+</code></pre>
+<h3 id="calculate_order_entrypoint"><a class="header" href="#calculate_order_entrypoint">CALCULATE_ORDER_ENTRYPOINT</a></h3>
+<p><em>Entrypoint to a calculate the amount and ratio of an order.</em></p>
+<pre><code class="language-solidity">SourceIndex constant CALCULATE_ORDER_ENTRYPOINT = SourceIndex.wrap(0);
+</code></pre>
+<h3 id="handle_io_entrypoint"><a class="header" href="#handle_io_entrypoint">HANDLE_IO_ENTRYPOINT</a></h3>
+<p><em>Entrypoint to handle the final internal vault movements resulting from
+matching multiple calculated orders.</em></p>
+<pre><code class="language-solidity">SourceIndex constant HANDLE_IO_ENTRYPOINT = SourceIndex.wrap(1);
+</code></pre>
+<h3 id="calculate_order_min_outputs"><a class="header" href="#calculate_order_min_outputs">CALCULATE_ORDER_MIN_OUTPUTS</a></h3>
+<p><em>Minimum outputs for calculate order are the amount and ratio.</em></p>
+<pre><code class="language-solidity">uint256 constant CALCULATE_ORDER_MIN_OUTPUTS = 2;
+</code></pre>
+<h3 id="calculate_order_max_outputs"><a class="header" href="#calculate_order_max_outputs">CALCULATE_ORDER_MAX_OUTPUTS</a></h3>
+<p><em>Maximum outputs for calculate order are the amount and ratio.</em></p>
+<pre><code class="language-solidity">uint16 constant CALCULATE_ORDER_MAX_OUTPUTS = 2;
+</code></pre>
+<h3 id="handle_io_min_outputs"><a class="header" href="#handle_io_min_outputs">HANDLE_IO_MIN_OUTPUTS</a></h3>
+<p><em>Handle IO has no outputs as it only responds to vault movements.</em></p>
+<pre><code class="language-solidity">uint256 constant HANDLE_IO_MIN_OUTPUTS = 0;
+</code></pre>
+<h3 id="handle_io_max_outputs"><a class="header" href="#handle_io_max_outputs">HANDLE_IO_MAX_OUTPUTS</a></h3>
+<p><em>Handle IO has no outputs as it only response to vault movements.</em></p>
+<pre><code class="language-solidity">uint16 constant HANDLE_IO_MAX_OUTPUTS = 0;
+</code></pre>
+<h3 id="calling_context_columns"><a class="header" href="#calling_context_columns">CALLING_CONTEXT_COLUMNS</a></h3>
+<p><em>Orderbook context is actually fairly complex. The calling context column
+is populated before calculate order, but the remaining columns are only
+available to handle IO as they depend on the full evaluation of calculuate
+order, and cross referencing against the same from the counterparty, as well
+as accounting limits such as current vault balances, etc.
+The token address and decimals for vault inputs and outputs IS available to
+the calculate order entrypoint, but not the final vault balances/diff.</em></p>
+<pre><code class="language-solidity">uint256 constant CALLING_CONTEXT_COLUMNS = 4;
+</code></pre>
+<h3 id="context_base_column"><a class="header" href="#context_base_column">CONTEXT_BASE_COLUMN</a></h3>
+<p><em>Base context from LibContext.</em></p>
+<pre><code class="language-solidity">uint256 constant CONTEXT_BASE_COLUMN = 0;
+</code></pre>
+<h3 id="context_calling_context_column"><a class="header" href="#context_calling_context_column">CONTEXT_CALLING_CONTEXT_COLUMN</a></h3>
+<p><em>Contextual data available to both calculate order and handle IO. The
+order hash, order owner and order counterparty. IMPORTANT NOTE that the
+typical base context of an order with the caller will often be an unrelated
+clearer of the order rather than the owner or counterparty.</em></p>
+<pre><code class="language-solidity">uint256 constant CONTEXT_CALLING_CONTEXT_COLUMN = 1;
+</code></pre>
+<h3 id="context_calculations_column"><a class="header" href="#context_calculations_column">CONTEXT_CALCULATIONS_COLUMN</a></h3>
+<p><em>Calculations column contains the DECIMAL RESCALED calculations but
+otherwise provided as-is according to calculate order entrypoint</em></p>
+<pre><code class="language-solidity">uint256 constant CONTEXT_CALCULATIONS_COLUMN = 2;
+</code></pre>
+<h3 id="context_vault_inputs_column"><a class="header" href="#context_vault_inputs_column">CONTEXT_VAULT_INPUTS_COLUMN</a></h3>
+<p><em>Vault inputs are the literal token amounts and vault balances before and
+after for the input token from the perspective of the order. MAY be
+significantly different to the calculated amount due to insufficient vault
+balances from either the owner or counterparty, etc.</em></p>
+<pre><code class="language-solidity">uint256 constant CONTEXT_VAULT_INPUTS_COLUMN = 3;
+</code></pre>
+<h3 id="context_vault_outputs_column"><a class="header" href="#context_vault_outputs_column">CONTEXT_VAULT_OUTPUTS_COLUMN</a></h3>
+<p><em>Vault outputs are the same as vault inputs but for the output token from
+the perspective of the order.</em></p>
+<pre><code class="language-solidity">uint256 constant CONTEXT_VAULT_OUTPUTS_COLUMN = 4;
+</code></pre>
+<h3 id="context_vault_io_token"><a class="header" href="#context_vault_io_token">CONTEXT_VAULT_IO_TOKEN</a></h3>
+<p><em>Row of the token address for vault inputs and outputs columns.</em></p>
+<pre><code class="language-solidity">uint256 constant CONTEXT_VAULT_IO_TOKEN = 0;
+</code></pre>
+<h3 id="context_vault_io_token_decimals"><a class="header" href="#context_vault_io_token_decimals">CONTEXT_VAULT_IO_TOKEN_DECIMALS</a></h3>
+<p><em>Row of the token decimals for vault inputs and outputs columns.</em></p>
+<pre><code class="language-solidity">uint256 constant CONTEXT_VAULT_IO_TOKEN_DECIMALS = 1;
+</code></pre>
+<h3 id="context_vault_io_vault_id"><a class="header" href="#context_vault_io_vault_id">CONTEXT_VAULT_IO_VAULT_ID</a></h3>
+<p><em>Row of the vault ID for vault inputs and outputs columns.</em></p>
+<pre><code class="language-solidity">uint256 constant CONTEXT_VAULT_IO_VAULT_ID = 2;
+</code></pre>
+<h3 id="context_vault_io_balance_before"><a class="header" href="#context_vault_io_balance_before">CONTEXT_VAULT_IO_BALANCE_BEFORE</a></h3>
+<p><em>Row of the vault balance before the order was cleared for vault inputs
+and outputs columns.</em></p>
+<pre><code class="language-solidity">uint256 constant CONTEXT_VAULT_IO_BALANCE_BEFORE = 3;
+</code></pre>
+<h3 id="context_vault_io_balance_diff"><a class="header" href="#context_vault_io_balance_diff">CONTEXT_VAULT_IO_BALANCE_DIFF</a></h3>
+<p><em>Row of the vault balance difference after the order was cleared for
+vault inputs and outputs columns. The diff is ALWAYS POSITIVE as it is a
+<code>uint256</code> so it must be added to input balances and subtraced from output
+balances.</em></p>
+<pre><code class="language-solidity">uint256 constant CONTEXT_VAULT_IO_BALANCE_DIFF = 4;
+</code></pre>
+<h3 id="context_vault_io_rows"><a class="header" href="#context_vault_io_rows">CONTEXT_VAULT_IO_ROWS</a></h3>
+<p><em>Length of a vault IO column.</em></p>
+<pre><code class="language-solidity">uint256 constant CONTEXT_VAULT_IO_ROWS = 5;
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="contents-2"><a class="header" href="#contents-2">Contents</a></h1>
+<ul>
+<li><a href="src/interface//src/interface/deprecated">deprecated</a></li>
+<li><a href="src/interface//src/interface/ierc3156">ierc3156</a></li>
+<li><a href="src/interface//src/interface/unstable">unstable</a></li>
+<li><a href="src/interface/IOrderBookV2.sol/struct.DepositConfig.html">DepositConfig</a></li>
+<li><a href="src/interface/IOrderBookV2.sol/struct.WithdrawConfig.html">WithdrawConfig</a></li>
+<li><a href="src/interface/IOrderBookV2.sol/struct.IO.html">IO</a></li>
+<li><a href="src/interface/IOrderBookV2.sol/struct.OrderConfig.html">OrderConfig</a></li>
+<li><a href="src/interface/IOrderBookV2.sol/struct.Order.html">Order</a></li>
+<li><a href="src/interface/IOrderBookV2.sol/struct.TakeOrdersConfig.html">TakeOrdersConfig</a></li>
+<li><a href="src/interface/IOrderBookV2.sol/struct.TakeOrderConfig.html">TakeOrderConfig</a></li>
+<li><a href="src/interface/IOrderBookV2.sol/struct.ClearConfig.html">ClearConfig</a></li>
+<li><a href="src/interface/IOrderBookV2.sol/struct.ClearStateChange.html">ClearStateChange</a></li>
+<li><a href="src/interface/IOrderBookV2.sol/interface.IOrderBookV2.html">IOrderBookV2</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="contents-3"><a class="header" href="#contents-3">Contents</a></h1>
+<ul>
+<li><a href="src/interface/deprecated/IOrderBookV1.sol/struct.DepositConfig.html">DepositConfig</a></li>
+<li><a href="src/interface/deprecated/IOrderBookV1.sol/struct.WithdrawConfig.html">WithdrawConfig</a></li>
+<li><a href="src/interface/deprecated/IOrderBookV1.sol/struct.IO.html">IO</a></li>
+<li><a href="src/interface/deprecated/IOrderBookV1.sol/struct.OrderConfig.html">OrderConfig</a></li>
+<li><a href="src/interface/deprecated/IOrderBookV1.sol/struct.Order.html">Order</a></li>
+<li><a href="src/interface/deprecated/IOrderBookV1.sol/struct.TakeOrdersConfig.html">TakeOrdersConfig</a></li>
+<li><a href="src/interface/deprecated/IOrderBookV1.sol/struct.TakeOrderConfig.html">TakeOrderConfig</a></li>
+<li><a href="src/interface/deprecated/IOrderBookV1.sol/struct.ClearConfig.html">ClearConfig</a></li>
+<li><a href="src/interface/deprecated/IOrderBookV1.sol/struct.ClearStateChange.html">ClearStateChange</a></li>
+<li><a href="src/interface/deprecated/IOrderBookV1.sol/interface.IOrderBookV1.html">IOrderBookV1</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="depositconfig"><a class="header" href="#depositconfig">DepositConfig</a></h1>
+<p><a href="https://github.com/rainprotocol/rain.orderbook/blob/bc1ef8bda6d1f1c6857ff284f17d6369cd1c4dbe/src/interface/deprecated/IOrderBookV1.sol">Git Source</a></p>
+<p>Configuration for a deposit. All deposits are processed by and for
+<code>msg.sender</code> so the vaults are unambiguous here.</p>
+<pre><code class="language-solidity">struct DepositConfig {
+    address token;
+    uint256 vaultId;
+    uint256 amount;
+}
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="withdrawconfig"><a class="header" href="#withdrawconfig">WithdrawConfig</a></h1>
+<p><a href="https://github.com/rainprotocol/rain.orderbook/blob/bc1ef8bda6d1f1c6857ff284f17d6369cd1c4dbe/src/interface/deprecated/IOrderBookV1.sol">Git Source</a></p>
+<p>Configuration for a withdrawal. All withdrawals are processed by and for
+<code>msg.sender</code> so the vaults are unambiguous here.</p>
+<pre><code class="language-solidity">struct WithdrawConfig {
+    address token;
+    uint256 vaultId;
+    uint256 amount;
+}
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="io"><a class="header" href="#io">IO</a></h1>
+<p><a href="https://github.com/rainprotocol/rain.orderbook/blob/bc1ef8bda6d1f1c6857ff284f17d6369cd1c4dbe/src/interface/deprecated/IOrderBookV1.sol">Git Source</a></p>
+<p>Configuration for a single input or output on an <code>Order</code>.</p>
+<pre><code class="language-solidity">struct IO {
+    address token;
+    uint8 decimals;
+    uint256 vaultId;
+}
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="orderconfig"><a class="header" href="#orderconfig">OrderConfig</a></h1>
+<p><a href="https://github.com/rainprotocol/rain.orderbook/blob/bc1ef8bda6d1f1c6857ff284f17d6369cd1c4dbe/src/interface/deprecated/IOrderBookV1.sol">Git Source</a></p>
+<p>Config the order owner may provide to define their order. The <code>msg.sender</code>
+that adds an order cannot modify the owner nor bypass the integrity check of
+the expression deployer that they specify. However they MAY specify a
+deployer with a corrupt integrity check, so counterparties and clearers MUST
+check the DISpair of the order and avoid untrusted pairings.</p>
+<pre><code class="language-solidity">struct OrderConfig {
+    IO[] validInputs;
+    IO[] validOutputs;
+    EvaluableConfig evaluableConfig;
+    bytes meta;
+}
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="order"><a class="header" href="#order">Order</a></h1>
+<p><a href="https://github.com/rainprotocol/rain.orderbook/blob/bc1ef8bda6d1f1c6857ff284f17d6369cd1c4dbe/src/interface/deprecated/IOrderBookV1.sol">Git Source</a></p>
+<p>Defines a fully deployed order ready to evaluate by Orderbook.</p>
+<pre><code class="language-solidity">struct Order {
+    address owner;
+    bool handleIO;
+    Evaluable evaluable;
+    IO[] validInputs;
+    IO[] validOutputs;
+}
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="takeordersconfig"><a class="header" href="#takeordersconfig">TakeOrdersConfig</a></h1>
+<p><a href="https://github.com/rainprotocol/rain.orderbook/blob/bc1ef8bda6d1f1c6857ff284f17d6369cd1c4dbe/src/interface/deprecated/IOrderBookV1.sol">Git Source</a></p>
+<p>Config for a list of orders to take sequentially as part of a <code>takeOrders</code>
+call.</p>
+<pre><code class="language-solidity">struct TakeOrdersConfig {
+    address output;
+    address input;
+    uint256 minimumInput;
+    uint256 maximumInput;
+    uint256 maximumIORatio;
+    TakeOrderConfig[] orders;
+}
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="takeorderconfig"><a class="header" href="#takeorderconfig">TakeOrderConfig</a></h1>
+<p><a href="https://github.com/rainprotocol/rain.orderbook/blob/bc1ef8bda6d1f1c6857ff284f17d6369cd1c4dbe/src/interface/deprecated/IOrderBookV1.sol">Git Source</a></p>
+<p>Config for an individual take order from the overall list of orders in a
+call to <code>takeOrders</code>.</p>
+<pre><code class="language-solidity">struct TakeOrderConfig {
+    Order order;
+    uint256 inputIOIndex;
+    uint256 outputIOIndex;
+    SignedContext[] signedContext;
+}
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="clearconfig"><a class="header" href="#clearconfig">ClearConfig</a></h1>
+<p><a href="https://github.com/rainprotocol/rain.orderbook/blob/bc1ef8bda6d1f1c6857ff284f17d6369cd1c4dbe/src/interface/deprecated/IOrderBookV1.sol">Git Source</a></p>
+<p>Additional config to a <code>clear</code> that allows two orders to be fully matched to
+a specific token moment. Also defines the bounty for the clearer.</p>
+<pre><code class="language-solidity">struct ClearConfig {
+    uint256 aliceInputIOIndex;
+    uint256 aliceOutputIOIndex;
+    uint256 bobInputIOIndex;
+    uint256 bobOutputIOIndex;
+    uint256 aliceBountyVaultId;
+    uint256 bobBountyVaultId;
+}
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="clearstatechange"><a class="header" href="#clearstatechange">ClearStateChange</a></h1>
+<p><a href="https://github.com/rainprotocol/rain.orderbook/blob/bc1ef8bda6d1f1c6857ff284f17d6369cd1c4dbe/src/interface/deprecated/IOrderBookV1.sol">Git Source</a></p>
+<p>Summary of the vault state changes due to clearing an order. NOT the state
+changes sent to the interpreter store, these are the LOCAL CHANGES in vault
+balances. Note that the difference in inputs/outputs overall between the
+counterparties is the bounty paid to the entity that cleared the order.</p>
+<pre><code class="language-solidity">struct ClearStateChange {
+    uint256 aliceOutput;
+    uint256 bobOutput;
+    uint256 aliceInput;
+    uint256 bobInput;
+}
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="iorderbookv1"><a class="header" href="#iorderbookv1">IOrderBookV1</a></h1>
+<p><a href="https://github.com/rainprotocol/rain.orderbook/blob/bc1ef8bda6d1f1c6857ff284f17d6369cd1c4dbe/src/interface/deprecated/IOrderBookV1.sol">Git Source</a></p>
+<p><strong>Inherits:</strong>
+<a href="src/interface/deprecated/IOrderBookV1.sol//src/interface/ierc3156/IERC3156FlashLender.sol/interface.IERC3156FlashLender.html">IERC3156FlashLender</a>, IInterpreterCallerV1</p>
+<p>An orderbook that deploys <em>strategies</em> represented as interpreter
+expressions rather than individual orders. The order book contract itself
+behaves similarly to an <code>ERC4626</code> vault but with much more fine grained
+control over how tokens are allocated and moved internally by their owners,
+and without any concept of &quot;shares&quot;. Token owners MAY deposit and withdraw
+their tokens under arbitrary vault IDs on a per-token basis, then define
+orders that specify how tokens move between vaults according to an expression.
+The expression returns a maximum amount and a token input/output ratio from
+the perpective of the order. When two expressions intersect, as in their
+ratios are the inverse of each other, then tokens can move between vaults.
+For example, consider order A with input TKNA and output TKNB with a constant
+ratio of 100:1. This order in isolation has no ability to move tokens. If
+an order B appears with input TKNB and output TKNA and a ratio of 1:100 then
+this is a perfect match with order A. In this case 100 TKNA will move from
+order B to order A and 1 TKNB will move from order A to order B.
+IO ratios are always specified as input:output and are 18 decimal fixed point
+values. The maximum amount that can be moved in the current clearance is also
+set by the order expression as an 18 decimal fixed point value.
+Typically orders will not clear when their match is exactly 1:1 as the
+clearer needs to pay gas to process the match. Each order will get exactly
+the ratio it calculates when it does clear so if there is <em>overlap</em> in the
+ratios then the clearer keeps the difference. In our above example, consider
+order B asking a ratio of 1:110 instead of 1:100. In this case 100 TKNA will
+move from order B to order A and 10 TKNA will move to the clearer's vault and
+1 TKNB will move from order A to order B. In the case of fixed prices this is
+not very interesting as order B could more simply take order A directly for
+cheaper rather than involving a third party. Indeed, Orderbook supports a
+direct &quot;take orders&quot; method that works similar to a &quot;market buy&quot;. In the case
+of dynamic expression based ratios, it allows both order A and order B to
+clear non-interactively according to their strategy, trading off active
+management, dealing with front-running, MEV, etc. for zero-gas and
+exact-ratio clearance.
+The general invariant for clearing and take orders is:</p>
+<pre><code>ratioA = InputA / OutputA
+ratioB = InputB / OutputB
+ratioA * ratioB = ( InputA * InputB ) / ( OutputA * OutputB )
+OutputA &gt;= InputB
+OutputB &gt;= InputA
+∴ ratioA * ratioB &lt;= 1
+</code></pre>
+<p>Orderbook is <code>IERC3156FlashLender</code> compliant with a 0 fee flash loan
+implementation to allow external liquidity from other onchain DEXes to match
+against orderbook expressions. All deposited tokens across all vaults are
+available for flashloan, the flashloan MAY BE REPAID BY CALLING TAKE ORDER
+such that Orderbook's liability to its vaults is decreased by an incoming
+trade from the flashloan borrower. See <code>ZeroExOrderBookFlashBorrower</code> for
+an example of how this works in practise.
+Orderbook supports many to many input/output token relationship, for example
+some order can specify an array of stables it would be willing to accept in
+return for some ETH. This removes the need for a combinatorial explosion of
+order strategies between like assets but introduces the issue of token
+decimal handling. End users understand that &quot;one&quot; USDT is roughly equal to
+&quot;one&quot; DAI, but onchain this is incorrect by <em>12 orders of magnitude</em>. This
+is because &quot;one&quot; DAI is <code>1e18</code> tokens and &quot;one&quot; USDT is <code>1e6</code> tokens. The
+orderbook is allowing orders to deploy expressions that define <em>economic
+equivalence</em> but this doesn't map 1:1 with numeric equivalence in a many to
+many setup behind token decimal convensions. The solution is to require that
+end users who place orders provide the decimals of each token they include
+in their valid IO lists, and to calculate all amounts and ratios in their
+expressions <em>as though they were 18 decimal fixed point values</em>. Orderbook
+will then automatically rescale the expression values before applying the
+final vault movements. If an order provides the &quot;wrong&quot; decimal values for
+some token then it will simply calculate its own ratios and amounts
+incorrectly which will either lead to no matching orders or a very bad trade
+for the order owner. There is no way that misrepresenting decimals can attack
+some other order by a counterparty. Orderbook DOES NOT read decimals from
+tokens onchain because A. this would be gas for an external call to a cold
+token contract and B. the ERC20 standard specifically states NOT to read
+decimals from the interface onchain.
+Token amounts and ratios returned by calculate order MUST be 18 decimal fixed
+point values. Token amounts input to handle IO MUST be the exact absolute
+values that move between the vaults, i.e. NOT rescaled to 18 decimals. The
+author of the handle IO expression MUST use the token decimals and amounts to
+rescale themselves if they want that logic, notably the expression author
+will need to specify the desired rounding behaviour in the rescaling process.
+When two orders clear there are NO TOKEN MOVEMENTS, only internal vault
+balances are updated from the input and output vaults. Typically this results
+in less gas per clear than calling external token transfers and also avoids
+issues with reentrancy, allowances, external balances etc. This also means
+that REBASING TOKENS AND TOKENS WITH DYNAMIC BALANCE ARE NOT SUPPORTED.
+Orderbook ONLY WORKS IF TOKEN BALANCES ARE 1:1 WITH ADDITION/SUBTRACTION PER
+VAULT MOVEMENT.
+Dust due to rounding errors always favours the order. Output max is rounded
+down and IO ratios are rounded up. Input and output amounts are always
+converted to absolute values before applying to vault balances such that
+orderbook always retains fully collateralised inventory of underlying token
+balances to support withdrawals, with the caveat that dynamic token balanes
+are not supported.
+When an order clears it is NOT removed. Orders remain active until the owner
+deactivates them. This is gas efficient as order owners MAY deposit more
+tokens in a vault with an order against it many times and the order strategy
+will continue to be clearable according to its expression. As vault IDs are
+<code>uint256</code> values there are effectively infinite possible vaults for any token
+so there is no limit to how many active orders any address can have at one
+time. This also allows orders to be daisy chained arbitrarily where output
+vaults for some order are the input vaults for some other order.
+Expression storage is namespaced by order owner, so gets and sets are unique
+to each onchain address. Order owners MUST TAKE CARE not to override their
+storage sets globally across all their orders, which they can do most simply
+by hashing the order hash into their get/set keys inside the expression. This
+gives maximum flexibility for shared state across orders without allowing
+order owners to attack and overwrite values stored by orders placed by their
+counterparty.
+Note that each order specifies its own interpreter and deployer so the
+owner is responsible for not corrupting their own calculations with bad
+interpreters. This also means the Orderbook MUST assume the interpreter, and
+notably the interpreter's store, is malicious and guard against reentrancy
+etc.
+As Orderbook supports any expression that can run on any <code>IInterpreterV1</code> and
+counterparties are available to the order, order strategies are free to
+implement KYC/membership, tracking, distributions, stock, buybacks, etc. etc.</p>
+<h2 id="functions-4"><a class="header" href="#functions-4">Functions</a></h2>
+<h3 id="vaultbalance-1"><a class="header" href="#vaultbalance-1">vaultBalance</a></h3>
+<p>Get the current balance of a vault for a given owner, token and vault ID.</p>
+<pre><code class="language-solidity">function vaultBalance(address owner, address token, uint256 id) external view returns (uint256 balance);
+</code></pre>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>owner</code></td><td><code>address</code></td><td>The owner of the vault.</td></tr>
+<tr><td><code>token</code></td><td><code>address</code></td><td>The token the vault is for.</td></tr>
+<tr><td><code>id</code></td><td><code>uint256</code></td><td>The vault ID to read.</td></tr>
+</tbody></table>
+</div>
+<p><strong>Returns</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>balance</code></td><td><code>uint256</code></td><td>The current balance of the vault.</td></tr>
+</tbody></table>
+</div>
+<h3 id="deposit-1"><a class="header" href="#deposit-1">deposit</a></h3>
+<p><code>msg.sender</code> deposits tokens according to config. The config specifies
+the vault to deposit tokens under. Delegated depositing is NOT supported.
+Depositing DOES NOT mint shares (unlike ERC4626) so the overall vaulted
+experience is much simpler as there is always a 1:1 relationship between
+deposited assets and vault balances globally and individually. This
+mitigates rounding/dust issues, speculative behaviour on derived assets,
+possible regulatory issues re: whether a vault share is a security, code
+bloat on the vault, complex mint/deposit/withdraw/redeem 4-way logic,
+the need for preview functions, etc. etc.
+At the same time, allowing vault IDs to be specified by the depositor
+allows much more granular and direct control over token movements within
+Orderbook than either ERC4626 vault shares or mere contract-level ERC20
+allowances can facilitate.</p>
+<pre><code class="language-solidity">function deposit(DepositConfig calldata config) external;
+</code></pre>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>config</code></td><td><code>DepositConfig</code></td><td>All config for the deposit.</td></tr>
+</tbody></table>
+</div>
+<h3 id="withdraw-1"><a class="header" href="#withdraw-1">withdraw</a></h3>
+<p>Allows the sender to withdraw any tokens from their own vaults. If the
+withrawer has an active flash loan debt denominated in the same token
+being withdrawn then Orderbook will merely reduce the debt and NOT send
+the amount of tokens repaid to the flashloan debt.</p>
+<pre><code class="language-solidity">function withdraw(WithdrawConfig calldata config) external;
+</code></pre>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>config</code></td><td><code>WithdrawConfig</code></td><td>All config required to withdraw. Notably if the amount is less than the current vault balance then the vault will be cleared to 0 rather than the withdraw transaction reverting.</td></tr>
+</tbody></table>
+</div>
+<h3 id="addorder-1"><a class="header" href="#addorder-1">addOrder</a></h3>
+<p>Given an order config, deploys the expression and builds the full <code>Order</code>
+for the config, then records it as an active order. Delegated adding an
+order is NOT supported. The <code>msg.sender</code> that adds an order is ALWAYS
+the owner and all resulting vault movements are their own.</p>
+<pre><code class="language-solidity">function addOrder(OrderConfig calldata config) external;
+</code></pre>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>config</code></td><td><code>OrderConfig</code></td><td>All config required to build an <code>Order</code>.</td></tr>
+</tbody></table>
+</div>
+<h3 id="removeorder-1"><a class="header" href="#removeorder-1">removeOrder</a></h3>
+<p>Order owner can remove their own orders. Delegated order removal is NOT
+supported and will revert. Removing an order multiple times or removing
+an order that never existed are valid, the event will be emitted and the
+transaction will complete with that order hash definitely, redundantly
+not live.</p>
+<pre><code class="language-solidity">function removeOrder(Order calldata order) external;
+</code></pre>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>order</code></td><td><code>Order</code></td><td>The <code>Order</code> data exactly as it was added.</td></tr>
+</tbody></table>
+</div>
+<h3 id="takeorders-1"><a class="header" href="#takeorders-1">takeOrders</a></h3>
+<p>Allows <code>msg.sender</code> to attempt to fill a list of orders in sequence
+without needing to place their own order and clear them. This works like
+a market buy but against a specific set of orders. Every order will
+looped over and calculated individually then filled maximally until the
+request input is reached for the <code>msg.sender</code>. The <code>msg.sender</code> is
+responsible for selecting the best orders at the time according to their
+criteria and MAY specify a maximum IO ratio to guard against an order
+spiking the ratio beyond what the <code>msg.sender</code> expected and is
+comfortable with. As orders may be removed and calculate their ratios
+dynamically, all issues fulfilling an order other than misconfiguration
+by the <code>msg.sender</code> are no-ops and DO NOT revert the transaction. This
+allows the <code>msg.sender</code> to optimistically provide a list of orders that
+they aren't sure will completely fill at a good price, and fallback to
+more reliable orders further down their list. Misconfiguration such as
+token mismatches are errors that revert as this is known and static at
+all times to the <code>msg.sender</code> so MUST be provided correctly. <code>msg.sender</code>
+MAY specify a minimum input that MUST be reached across all orders in the
+list, otherwise the transaction will revert, this MAY be set to zero.
+Exactly like withdraw, if there is an active flash loan for <code>msg.sender</code>
+they will have their outstanding loan reduced by the final input amount
+preferentially before sending any tokens. Notably this allows arb bots
+implemented as flash loan borrowers to connect orders against external
+liquidity directly by paying back the loan with a <code>takeOrders</code> call and
+outputting the result of the external trade.
+Rounding errors always favour the order never the <code>msg.sender</code>.</p>
+<pre><code class="language-solidity">function takeOrders(TakeOrdersConfig calldata config) external returns (uint256 totalInput, uint256 totalOutput);
+</code></pre>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>config</code></td><td><code>TakeOrdersConfig</code></td><td>The constraints and list of orders to take, orders are processed sequentially in order as provided, there is NO ATTEMPT onchain to predict/filter/sort these orders other than evaluating them as provided. Inputs and outputs are from the perspective of <code>msg.sender</code> except for values specified by the orders themselves which are the from the perspective of that order.</td></tr>
+</tbody></table>
+</div>
+<p><strong>Returns</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>totalInput</code></td><td><code>uint256</code></td><td>Total tokens sent to <code>msg.sender</code>, taken from order vaults processed.</td></tr>
+<tr><td><code>totalOutput</code></td><td><code>uint256</code></td><td>Total tokens taken from <code>msg.sender</code> and distributed between vaults.</td></tr>
+</tbody></table>
+</div>
+<h3 id="clear-1"><a class="header" href="#clear-1">clear</a></h3>
+<p>Allows <code>msg.sender</code> to match two live orders placed earlier by
+non-interactive parties and claim a bounty in the process. The clearer is
+free to select any two live orders on the order book for matching and as
+long as they have compatible tokens, ratios and amounts, the orders will
+clear. Clearing the orders DOES NOT remove them from the orderbook, they
+remain live until explicitly removed by their owner. Even if the input
+vault balances are completely emptied, the orders remain live until
+removed. This allows order owners to deploy a strategy over a long period
+of time and periodically top up the input vaults. Clearing two orders
+from the same owner is disallowed.
+Any mismatch in the ratios between the two orders will cause either more
+inputs than there are available outputs (transaction will revert) or less
+inputs than there are available outputs. In the latter case the excess
+outputs are given to the <code>msg.sender</code> of clear, to the vaults they
+specify in the clear config. This not only incentivises &quot;automatic&quot; clear
+calls for both alice and bob, but incentivises <em>prioritising greater
+ratio differences</em> with a larger bounty. The second point is important
+because it implicitly prioritises orders that are further from the
+current market price, thus putting constant increasing pressure on the
+entire system the further it drifts from the norm, no matter how esoteric
+the individual order expressions and sizings might be.
+All else equal there are several factors that would impact how reliably
+some order clears relative to the wider market, such as:</p>
+<ul>
+<li>Bounties are effectively percentages of cleared amounts so larger
+orders have larger bounties and cover gas costs more easily</li>
+<li>High gas on the network means that orders are harder to clear
+profitably so the negative spread of the ratios will need to be larger</li>
+<li>Complex and stateful expressions cost more gas to evalulate so the
+negative spread will need to be larger</li>
+<li>Erratic behavior of the order owner could reduce the willingness of
+third parties to interact if it could result in wasted gas due to
+orders suddently being removed before clearance etc.</li>
+<li>Dynamic and highly volatile words used in the expression could be
+ignored or low priority by clearers who want to be sure that they can
+accurately predict the ratios that they include in their clearance</li>
+<li>Geopolitical issues such as sanctions and regulatory restrictions could
+cause issues for certain owners and clearers</li>
+</ul>
+<pre><code class="language-solidity">function clear(
+    Order memory alice,
+    Order memory bob,
+    ClearConfig calldata clearConfig,
+    SignedContext[] memory aliceSignedContext,
+    SignedContext[] memory bobSignedContext
+) external;
+</code></pre>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>alice</code></td><td><code>Order</code></td><td>Some order to clear.</td></tr>
+<tr><td><code>bob</code></td><td><code>Order</code></td><td>Another order to clear.</td></tr>
+<tr><td><code>clearConfig</code></td><td><code>ClearConfig</code></td><td>Additional configuration for the clearance such as how to handle the bounty payment for the <code>msg.sender</code>.</td></tr>
+<tr><td><code>aliceSignedContext</code></td><td><code>SignedContext[]</code></td><td>Optional signed context that is relevant to A.</td></tr>
+<tr><td><code>bobSignedContext</code></td><td><code>SignedContext[]</code></td><td>Optional signed context that is relevant to B.</td></tr>
+</tbody></table>
+</div>
+<h2 id="events-1"><a class="header" href="#events-1">Events</a></h2>
+<h3 id="deposit-2"><a class="header" href="#deposit-2">Deposit</a></h3>
+<p>Some tokens have been deposited to a vault.</p>
+<pre><code class="language-solidity">event Deposit(address sender, DepositConfig config);
+</code></pre>
+<h3 id="withdraw-2"><a class="header" href="#withdraw-2">Withdraw</a></h3>
+<p>Some tokens have been withdrawn from a vault.</p>
+<pre><code class="language-solidity">event Withdraw(address sender, WithdrawConfig config, uint256 amount);
+</code></pre>
+<h3 id="addorder-2"><a class="header" href="#addorder-2">AddOrder</a></h3>
+<p>An order has been added to the orderbook. The order is permanently and
+always active according to its expression until/unless it is removed.</p>
+<pre><code class="language-solidity">event AddOrder(address sender, IExpressionDeployerV1 expressionDeployer, Order order, uint256 orderHash);
+</code></pre>
+<h3 id="removeorder-2"><a class="header" href="#removeorder-2">RemoveOrder</a></h3>
+<p>An order has been removed from the orderbook. This effectively
+deactivates it. Orders can be added again after removal.</p>
+<pre><code class="language-solidity">event RemoveOrder(address sender, Order order, uint256 orderHash);
+</code></pre>
+<h3 id="takeorder"><a class="header" href="#takeorder">TakeOrder</a></h3>
+<p>Some order has been taken by <code>msg.sender</code>. This is the same as them
+placing inverse orders then immediately clearing them all, but costs less
+gas and is more convenient and reliable. Analogous to a market buy
+against the specified orders. Each order that is matched within a the
+<code>takeOrders</code> loop emits its own individual event.</p>
+<pre><code class="language-solidity">event TakeOrder(address sender, TakeOrderConfig config, uint256 input, uint256 output);
+</code></pre>
+<h3 id="ordernotfound"><a class="header" href="#ordernotfound">OrderNotFound</a></h3>
+<p>Emitted when attempting to match an order that either never existed or
+was removed. An event rather than an error so that we allow attempting
+many orders in a loop and NOT rollback on &quot;best effort&quot; basis to clear.</p>
+<pre><code class="language-solidity">event OrderNotFound(address sender, address owner, uint256 orderHash);
+</code></pre>
+<h3 id="orderzeroamount"><a class="header" href="#orderzeroamount">OrderZeroAmount</a></h3>
+<p>Emitted when an order evaluates to a zero amount. An event rather than an
+error so that we allow attempting many orders in a loop and NOT rollback
+on a &quot;best effort&quot; basis to clear.</p>
+<pre><code class="language-solidity">event OrderZeroAmount(address sender, address owner, uint256 orderHash);
+</code></pre>
+<h3 id="orderexceedsmaxratio"><a class="header" href="#orderexceedsmaxratio">OrderExceedsMaxRatio</a></h3>
+<p>Emitted when an order evaluates to a ratio exceeding the counterparty's
+maximum limit. An error rather than an error so that we allow attempting
+many orders in a loop and NOT rollback on a &quot;best effort&quot; basis to clear.</p>
+<pre><code class="language-solidity">event OrderExceedsMaxRatio(address sender, address owner, uint256 orderHash);
+</code></pre>
+<h3 id="clear-2"><a class="header" href="#clear-2">Clear</a></h3>
+<p>Emitted before two orders clear. Covers both orders and includes all the
+state before anything is calculated.</p>
+<pre><code class="language-solidity">event Clear(address sender, Order alice, Order bob, ClearConfig clearConfig);
+</code></pre>
+<h3 id="afterclear"><a class="header" href="#afterclear">AfterClear</a></h3>
+<p>Emitted after two orders clear. Includes all final state changes in the
+vault balances, including the clearer's vaults.</p>
+<pre><code class="language-solidity">event AfterClear(address sender, ClearStateChange clearStateChange);
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="contents-4"><a class="header" href="#contents-4">Contents</a></h1>
+<ul>
+<li><a href="src/interface/ierc3156/IERC3156FlashBorrower.sol/interface.IERC3156FlashBorrower.html">IERC3156FlashBorrower</a></li>
+<li><a href="src/interface/ierc3156/IERC3156FlashBorrower.sol/constants.IERC3156FlashBorrower.html">IERC3156FlashBorrower constants</a></li>
+<li><a href="src/interface/ierc3156/IERC3156FlashLender.sol/interface.IERC3156FlashLender.html">IERC3156FlashLender</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="ierc3156flashborrower"><a class="header" href="#ierc3156flashborrower">IERC3156FlashBorrower</a></h1>
+<p><a href="https://github.com/rainprotocol/rain.orderbook/blob/bc1ef8bda6d1f1c6857ff284f17d6369cd1c4dbe/src/interface/ierc3156/IERC3156FlashBorrower.sol">Git Source</a></p>
+<h2 id="functions-5"><a class="header" href="#functions-5">Functions</a></h2>
+<h3 id="onflashloan-1"><a class="header" href="#onflashloan-1">onFlashLoan</a></h3>
+<p><em>Receive a flash loan.</em></p>
+<pre><code class="language-solidity">function onFlashLoan(address initiator, address token, uint256 amount, uint256 fee, bytes calldata data)
+    external
+    returns (bytes32);
+</code></pre>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>initiator</code></td><td><code>address</code></td><td>The initiator of the loan.</td></tr>
+<tr><td><code>token</code></td><td><code>address</code></td><td>The loan currency.</td></tr>
+<tr><td><code>amount</code></td><td><code>uint256</code></td><td>The amount of tokens lent.</td></tr>
+<tr><td><code>fee</code></td><td><code>uint256</code></td><td>The additional amount of tokens to repay.</td></tr>
+<tr><td><code>data</code></td><td><code>bytes</code></td><td>Arbitrary data structure, intended to contain user-defined parameters.</td></tr>
+</tbody></table>
+</div>
+<p><strong>Returns</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>&lt;none&gt;</code></td><td><code>bytes32</code></td><td>The keccak256 hash of &quot;ERC3156FlashBorrower.onFlashLoan&quot;</td></tr>
+</tbody></table>
+</div><div style="break-before: page; page-break-before: always;"></div><h1 id="constants-4"><a class="header" href="#constants-4">Constants</a></h1>
+<p><a href="https://github.com/rainprotocol/rain.orderbook/blob/bc1ef8bda6d1f1c6857ff284f17d6369cd1c4dbe/src/interface/ierc3156/IERC3156FlashBorrower.sol">Git Source</a></p>
+<h3 id="on_flash_loan_callback_success"><a class="header" href="#on_flash_loan_callback_success">ON_FLASH_LOAN_CALLBACK_SUCCESS</a></h3>
+<p><em>The ERC3156 spec mandates this hash be returned by <code>onFlashLoan</code> if it
+succeeds.</em></p>
+<pre><code class="language-solidity">bytes32 constant ON_FLASH_LOAN_CALLBACK_SUCCESS = keccak256(&quot;ERC3156FlashBorrower.onFlashLoan&quot;);
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="ierc3156flashlender"><a class="header" href="#ierc3156flashlender">IERC3156FlashLender</a></h1>
+<p><a href="https://github.com/rainprotocol/rain.orderbook/blob/bc1ef8bda6d1f1c6857ff284f17d6369cd1c4dbe/src/interface/ierc3156/IERC3156FlashLender.sol">Git Source</a></p>
+<h2 id="functions-6"><a class="header" href="#functions-6">Functions</a></h2>
+<h3 id="maxflashloan-1"><a class="header" href="#maxflashloan-1">maxFlashLoan</a></h3>
+<p><em>The amount of currency available to be lent.</em></p>
+<pre><code class="language-solidity">function maxFlashLoan(address token) external view returns (uint256);
+</code></pre>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>token</code></td><td><code>address</code></td><td>The loan currency.</td></tr>
+</tbody></table>
+</div>
+<p><strong>Returns</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>&lt;none&gt;</code></td><td><code>uint256</code></td><td>The amount of <code>token</code> that can be borrowed.</td></tr>
+</tbody></table>
+</div>
+<h3 id="flashfee-1"><a class="header" href="#flashfee-1">flashFee</a></h3>
+<p><em>The fee to be charged for a given loan.</em></p>
+<pre><code class="language-solidity">function flashFee(address token, uint256 amount) external view returns (uint256);
+</code></pre>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>token</code></td><td><code>address</code></td><td>The loan currency.</td></tr>
+<tr><td><code>amount</code></td><td><code>uint256</code></td><td>The amount of tokens lent.</td></tr>
+</tbody></table>
+</div>
+<p><strong>Returns</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>&lt;none&gt;</code></td><td><code>uint256</code></td><td>The amount of <code>token</code> to be charged for the loan, on top of the returned principal.</td></tr>
+</tbody></table>
+</div>
+<h3 id="flashloan-1"><a class="header" href="#flashloan-1">flashLoan</a></h3>
+<p><em>Initiate a flash loan.</em></p>
+<pre><code class="language-solidity">function flashLoan(IERC3156FlashBorrower receiver, address token, uint256 amount, bytes calldata data)
+    external
+    returns (bool);
+</code></pre>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>receiver</code></td><td><code>IERC3156FlashBorrower</code></td><td>The receiver of the tokens in the loan, and the receiver of the callback.</td></tr>
+<tr><td><code>token</code></td><td><code>address</code></td><td>The loan currency.</td></tr>
+<tr><td><code>amount</code></td><td><code>uint256</code></td><td>The amount of tokens lent.</td></tr>
+<tr><td><code>data</code></td><td><code>bytes</code></td><td>Arbitrary data structure, intended to contain user-defined parameters.</td></tr>
+</tbody></table>
+</div><div style="break-before: page; page-break-before: always;"></div><h1 id="contents-5"><a class="header" href="#contents-5">Contents</a></h1>
+<ul>
+<li><a href="src/interface/unstable/IOrderBookV3.sol/struct.IO.html">IO</a></li>
+<li><a href="src/interface/unstable/IOrderBookV3.sol/struct.OrderConfig.html">OrderConfig</a></li>
+<li><a href="src/interface/unstable/IOrderBookV3.sol/struct.Order.html">Order</a></li>
+<li><a href="src/interface/unstable/IOrderBookV3.sol/struct.TakeOrdersConfig.html">TakeOrdersConfig</a></li>
+<li><a href="src/interface/unstable/IOrderBookV3.sol/struct.TakeOrderConfig.html">TakeOrderConfig</a></li>
+<li><a href="src/interface/unstable/IOrderBookV3.sol/struct.ClearConfig.html">ClearConfig</a></li>
+<li><a href="src/interface/unstable/IOrderBookV3.sol/struct.ClearStateChange.html">ClearStateChange</a></li>
+<li><a href="src/interface/unstable/IOrderBookV3.sol/interface.IOrderBookV3.html">IOrderBookV3</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="io-1"><a class="header" href="#io-1">IO</a></h1>
+<p><a href="https://github.com/rainprotocol/rain.orderbook/blob/bc1ef8bda6d1f1c6857ff284f17d6369cd1c4dbe/src/interface/unstable/IOrderBookV3.sol">Git Source</a></p>
+<p>Configuration for a single input or output on an <code>Order</code>.</p>
+<pre><code class="language-solidity">struct IO {
+    address token;
+    uint8 decimals;
+    uint256 vaultId;
+}
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="orderconfig-1"><a class="header" href="#orderconfig-1">OrderConfig</a></h1>
+<p><a href="https://github.com/rainprotocol/rain.orderbook/blob/bc1ef8bda6d1f1c6857ff284f17d6369cd1c4dbe/src/interface/unstable/IOrderBookV3.sol">Git Source</a></p>
+<p>Config the order owner may provide to define their order. The <code>msg.sender</code>
+that adds an order cannot modify the owner nor bypass the integrity check of
+the expression deployer that they specify. However they MAY specify a
+deployer with a corrupt integrity check, so counterparties and clearers MUST
+check the DISpair of the order and avoid untrusted pairings.</p>
+<pre><code class="language-solidity">struct OrderConfig {
+    IO[] validInputs;
+    IO[] validOutputs;
+    EvaluableConfig evaluableConfig;
+    bytes meta;
+}
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="order-1"><a class="header" href="#order-1">Order</a></h1>
+<p><a href="https://github.com/rainprotocol/rain.orderbook/blob/bc1ef8bda6d1f1c6857ff284f17d6369cd1c4dbe/src/interface/unstable/IOrderBookV3.sol">Git Source</a></p>
+<p>Defines a fully deployed order ready to evaluate by Orderbook.</p>
+<pre><code class="language-solidity">struct Order {
+    address owner;
+    bool handleIO;
+    Evaluable evaluable;
+    IO[] validInputs;
+    IO[] validOutputs;
+}
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="takeordersconfig-1"><a class="header" href="#takeordersconfig-1">TakeOrdersConfig</a></h1>
+<p><a href="https://github.com/rainprotocol/rain.orderbook/blob/bc1ef8bda6d1f1c6857ff284f17d6369cd1c4dbe/src/interface/unstable/IOrderBookV3.sol">Git Source</a></p>
+<p>Config for a list of orders to take sequentially as part of a <code>takeOrders</code>
+call.</p>
+<pre><code class="language-solidity">struct TakeOrdersConfig {
+    address output;
+    address input;
+    uint256 minimumInput;
+    uint256 maximumInput;
+    uint256 maximumIORatio;
+    TakeOrderConfig[] orders;
+}
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="takeorderconfig-1"><a class="header" href="#takeorderconfig-1">TakeOrderConfig</a></h1>
+<p><a href="https://github.com/rainprotocol/rain.orderbook/blob/bc1ef8bda6d1f1c6857ff284f17d6369cd1c4dbe/src/interface/unstable/IOrderBookV3.sol">Git Source</a></p>
+<p>Config for an individual take order from the overall list of orders in a
+call to <code>takeOrders</code>.</p>
+<pre><code class="language-solidity">struct TakeOrderConfig {
+    Order order;
+    uint256 inputIOIndex;
+    uint256 outputIOIndex;
+    SignedContextV1[] signedContext;
+}
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="clearconfig-1"><a class="header" href="#clearconfig-1">ClearConfig</a></h1>
+<p><a href="https://github.com/rainprotocol/rain.orderbook/blob/bc1ef8bda6d1f1c6857ff284f17d6369cd1c4dbe/src/interface/unstable/IOrderBookV3.sol">Git Source</a></p>
+<p>Additional config to a <code>clear</code> that allows two orders to be fully matched to
+a specific token moment. Also defines the bounty for the clearer.</p>
+<pre><code class="language-solidity">struct ClearConfig {
+    uint256 aliceInputIOIndex;
+    uint256 aliceOutputIOIndex;
+    uint256 bobInputIOIndex;
+    uint256 bobOutputIOIndex;
+    uint256 aliceBountyVaultId;
+    uint256 bobBountyVaultId;
+}
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="clearstatechange-1"><a class="header" href="#clearstatechange-1">ClearStateChange</a></h1>
+<p><a href="https://github.com/rainprotocol/rain.orderbook/blob/bc1ef8bda6d1f1c6857ff284f17d6369cd1c4dbe/src/interface/unstable/IOrderBookV3.sol">Git Source</a></p>
+<p>Summary of the vault state changes due to clearing an order. NOT the state
+changes sent to the interpreter store, these are the LOCAL CHANGES in vault
+balances. Note that the difference in inputs/outputs overall between the
+counterparties is the bounty paid to the entity that cleared the order.</p>
+<pre><code class="language-solidity">struct ClearStateChange {
+    uint256 aliceOutput;
+    uint256 bobOutput;
+    uint256 aliceInput;
+    uint256 bobInput;
+}
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="iorderbookv3"><a class="header" href="#iorderbookv3">IOrderBookV3</a></h1>
+<p><a href="https://github.com/rainprotocol/rain.orderbook/blob/bc1ef8bda6d1f1c6857ff284f17d6369cd1c4dbe/src/interface/unstable/IOrderBookV3.sol">Git Source</a></p>
+<p><strong>Inherits:</strong>
+<a href="src/interface/unstable/IOrderBookV3.sol//src/interface/ierc3156/IERC3156FlashLender.sol/interface.IERC3156FlashLender.html">IERC3156FlashLender</a>, IInterpreterCallerV2</p>
+<p>An orderbook that deploys <em>strategies</em> represented as interpreter
+expressions rather than individual orders. The order book contract itself
+behaves similarly to an <code>ERC4626</code> vault but with much more fine grained
+control over how tokens are allocated and moved internally by their owners,
+and without any concept of &quot;shares&quot;. Token owners MAY deposit and withdraw
+their tokens under arbitrary vault IDs on a per-token basis, then define
+orders that specify how tokens move between vaults according to an expression.
+The expression returns a maximum amount and a token input/output ratio from
+the perpective of the order. When two expressions intersect, as in their
+ratios are the inverse of each other, then tokens can move between vaults.
+For example, consider order A with input TKNA and output TKNB with a constant
+ratio of 100:1. This order in isolation has no ability to move tokens. If
+an order B appears with input TKNB and output TKNA and a ratio of 1:100 then
+this is a perfect match with order A. In this case 100 TKNA will move from
+order B to order A and 1 TKNB will move from order A to order B.
+IO ratios are always specified as input:output and are 18 decimal fixed point
+values. The maximum amount that can be moved in the current clearance is also
+set by the order expression as an 18 decimal fixed point value.
+Typically orders will not clear when their match is exactly 1:1 as the
+clearer needs to pay gas to process the match. Each order will get exactly
+the ratio it calculates when it does clear so if there is <em>overlap</em> in the
+ratios then the clearer keeps the difference. In our above example, consider
+order B asking a ratio of 1:110 instead of 1:100. In this case 100 TKNA will
+move from order B to order A and 10 TKNA will move to the clearer's vault and
+1 TKNB will move from order A to order B. In the case of fixed prices this is
+not very interesting as order B could more simply take order A directly for
+cheaper rather than involving a third party. Indeed, Orderbook supports a
+direct &quot;take orders&quot; method that works similar to a &quot;market buy&quot;. In the case
+of dynamic expression based ratios, it allows both order A and order B to
+clear non-interactively according to their strategy, trading off active
+management, dealing with front-running, MEV, etc. for zero-gas and
+exact-ratio clearance.
+The general invariant for clearing and take orders is:</p>
+<pre><code>ratioA = InputA / OutputA
+ratioB = InputB / OutputB
+ratioA * ratioB = ( InputA * InputB ) / ( OutputA * OutputB )
+OutputA &gt;= InputB
+OutputB &gt;= InputA
+∴ ratioA * ratioB &lt;= 1
+</code></pre>
+<p>Orderbook is <code>IERC3156FlashLender</code> compliant with a 0 fee flash loan
+implementation to allow external liquidity from other onchain DEXes to match
+against orderbook expressions. All deposited tokens across all vaults are
+available for flashloan, the flashloan MAY BE REPAID BY CALLING TAKE ORDER
+such that Orderbook's liability to its vaults is decreased by an incoming
+trade from the flashloan borrower. See <code>ZeroExOrderBookFlashBorrower</code> for
+an example of how this works in practise.
+Orderbook supports many to many input/output token relationship, for example
+some order can specify an array of stables it would be willing to accept in
+return for some ETH. This removes the need for a combinatorial explosion of
+order strategies between like assets but introduces the issue of token
+decimal handling. End users understand that &quot;one&quot; USDT is roughly equal to
+&quot;one&quot; DAI, but onchain this is incorrect by <em>12 orders of magnitude</em>. This
+is because &quot;one&quot; DAI is <code>1e18</code> tokens and &quot;one&quot; USDT is <code>1e6</code> tokens. The
+orderbook is allowing orders to deploy expressions that define <em>economic
+equivalence</em> but this doesn't map 1:1 with numeric equivalence in a many to
+many setup behind token decimal convensions. The solution is to require that
+end users who place orders provide the decimals of each token they include
+in their valid IO lists, and to calculate all amounts and ratios in their
+expressions <em>as though they were 18 decimal fixed point values</em>. Orderbook
+will then automatically rescale the expression values before applying the
+final vault movements. If an order provides the &quot;wrong&quot; decimal values for
+some token then it will simply calculate its own ratios and amounts
+incorrectly which will either lead to no matching orders or a very bad trade
+for the order owner. There is no way that misrepresenting decimals can attack
+some other order by a counterparty. Orderbook DOES NOT read decimals from
+tokens onchain because A. this would be gas for an external call to a cold
+token contract and B. the ERC20 standard specifically states NOT to read
+decimals from the interface onchain.
+Token amounts and ratios returned by calculate order MUST be 18 decimal fixed
+point values. Token amounts input to handle IO MUST be the exact absolute
+values that move between the vaults, i.e. NOT rescaled to 18 decimals. The
+author of the handle IO expression MUST use the token decimals and amounts to
+rescale themselves if they want that logic, notably the expression author
+will need to specify the desired rounding behaviour in the rescaling process.
+When two orders clear there are NO TOKEN MOVEMENTS, only internal vault
+balances are updated from the input and output vaults. Typically this results
+in less gas per clear than calling external token transfers and also avoids
+issues with reentrancy, allowances, external balances etc. This also means
+that REBASING TOKENS AND TOKENS WITH DYNAMIC BALANCE ARE NOT SUPPORTED.
+Orderbook ONLY WORKS IF TOKEN BALANCES ARE 1:1 WITH ADDITION/SUBTRACTION PER
+VAULT MOVEMENT.
+Dust due to rounding errors always favours the order. Output max is rounded
+down and IO ratios are rounded up. Input and output amounts are always
+converted to absolute values before applying to vault balances such that
+orderbook always retains fully collateralised inventory of underlying token
+balances to support withdrawals, with the caveat that dynamic token balanes
+are not supported.
+When an order clears it is NOT removed. Orders remain active until the owner
+deactivates them. This is gas efficient as order owners MAY deposit more
+tokens in a vault with an order against it many times and the order strategy
+will continue to be clearable according to its expression. As vault IDs are
+<code>uint256</code> values there are effectively infinite possible vaults for any token
+so there is no limit to how many active orders any address can have at one
+time. This also allows orders to be daisy chained arbitrarily where output
+vaults for some order are the input vaults for some other order.
+Expression storage is namespaced by order owner, so gets and sets are unique
+to each onchain address. Order owners MUST TAKE CARE not to override their
+storage sets globally across all their orders, which they can do most simply
+by hashing the order hash into their get/set keys inside the expression. This
+gives maximum flexibility for shared state across orders without allowing
+order owners to attack and overwrite values stored by orders placed by their
+counterparty.
+Note that each order specifies its own interpreter and deployer so the
+owner is responsible for not corrupting their own calculations with bad
+interpreters. This also means the Orderbook MUST assume the interpreter, and
+notably the interpreter's store, is malicious and guard against reentrancy
+etc.
+As Orderbook supports any expression that can run on any <code>IInterpreterV1</code> and
+counterparties are available to the order, order strategies are free to
+implement KYC/membership, tracking, distributions, stock, buybacks, etc. etc.
+Main differences between <code>IOrderBookV2</code> and <code>IOderBookV3</code>:</p>
+<ul>
+<li>Most structs are now primitives to save gas.</li>
+</ul>
+<h2 id="functions-7"><a class="header" href="#functions-7">Functions</a></h2>
+<h3 id="vaultbalance-2"><a class="header" href="#vaultbalance-2">vaultBalance</a></h3>
+<p>Get the current balance of a vault for a given owner, token and vault ID.</p>
+<pre><code class="language-solidity">function vaultBalance(address owner, address token, uint256 id) external view returns (uint256 balance);
+</code></pre>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>owner</code></td><td><code>address</code></td><td>The owner of the vault.</td></tr>
+<tr><td><code>token</code></td><td><code>address</code></td><td>The token the vault is for.</td></tr>
+<tr><td><code>id</code></td><td><code>uint256</code></td><td>The vault ID to read.</td></tr>
+</tbody></table>
+</div>
+<p><strong>Returns</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>balance</code></td><td><code>uint256</code></td><td>The current balance of the vault.</td></tr>
+</tbody></table>
+</div>
+<h3 id="deposit-3"><a class="header" href="#deposit-3">deposit</a></h3>
+<p><code>msg.sender</code> deposits tokens according to config. The config specifies
+the vault to deposit tokens under. Delegated depositing is NOT supported.
+Depositing DOES NOT mint shares (unlike ERC4626) so the overall vaulted
+experience is much simpler as there is always a 1:1 relationship between
+deposited assets and vault balances globally and individually. This
+mitigates rounding/dust issues, speculative behaviour on derived assets,
+possible regulatory issues re: whether a vault share is a security, code
+bloat on the vault, complex mint/deposit/withdraw/redeem 4-way logic,
+the need for preview functions, etc. etc.
+At the same time, allowing vault IDs to be specified by the depositor
+allows much more granular and direct control over token movements within
+Orderbook than either ERC4626 vault shares or mere contract-level ERC20
+allowances can facilitate.
+Vault IDs are namespaced by the token address so there is no risk of
+collision between tokens. For example, vault ID 0 for token A is
+completely different to vault ID 0 for token B.
+<code>0</code> amount deposits are unsupported as underlying token contracts
+handle <code>0</code> value transfers differently and this would be a source of
+confusion. The order book MUST revert with <code>ZeroDepositAmount</code> if the
+amount is zero.</p>
+<pre><code class="language-solidity">function deposit(address token, uint256 vaultId, uint256 amount) external;
+</code></pre>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>token</code></td><td><code>address</code></td><td>The token to deposit.</td></tr>
+<tr><td><code>vaultId</code></td><td><code>uint256</code></td><td>The vault ID to deposit under.</td></tr>
+<tr><td><code>amount</code></td><td><code>uint256</code></td><td>The amount of tokens to deposit.</td></tr>
+</tbody></table>
+</div>
+<h3 id="withdraw-3"><a class="header" href="#withdraw-3">withdraw</a></h3>
+<p>Allows the sender to withdraw any tokens from their own vaults. If the
+withrawer has an active flash loan debt denominated in the same token
+being withdrawn then Orderbook will merely reduce the debt and NOT send
+the amount of tokens repaid to the flashloan debt.</p>
+<pre><code class="language-solidity">function withdraw(address token, uint256 vaultId, uint256 targetAmount) external;
+</code></pre>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>token</code></td><td><code>address</code></td><td>The token to withdraw.</td></tr>
+<tr><td><code>vaultId</code></td><td><code>uint256</code></td><td>The vault ID to withdraw from.</td></tr>
+<tr><td><code>targetAmount</code></td><td><code>uint256</code></td><td>The amount of tokens to attempt to withdraw. MAY result in fewer tokens withdrawn if the vault balance is lower than the target amount. MAY NOT be zero, the order book MUST revert with <code>ZeroWithdrawTargetAmount</code> if the amount is zero.</td></tr>
+</tbody></table>
+</div>
+<h3 id="addorder-3"><a class="header" href="#addorder-3">addOrder</a></h3>
+<p>Given an order config, deploys the expression and builds the full <code>Order</code>
+for the config, then records it as an active order. Delegated adding an
+order is NOT supported. The <code>msg.sender</code> that adds an order is ALWAYS
+the owner and all resulting vault movements are their own.</p>
+<pre><code class="language-solidity">function addOrder(OrderConfig calldata config) external;
+</code></pre>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>config</code></td><td><code>OrderConfig</code></td><td>All config required to build an <code>Order</code>.</td></tr>
+</tbody></table>
+</div>
+<h3 id="removeorder-3"><a class="header" href="#removeorder-3">removeOrder</a></h3>
+<p>Order owner can remove their own orders. Delegated order removal is NOT
+supported and will revert. Removing an order multiple times or removing
+an order that never existed are valid, the event will be emitted and the
+transaction will complete with that order hash definitely, redundantly
+not live.</p>
+<pre><code class="language-solidity">function removeOrder(Order calldata order) external;
+</code></pre>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>order</code></td><td><code>Order</code></td><td>The <code>Order</code> data exactly as it was added.</td></tr>
+</tbody></table>
+</div>
+<h3 id="takeorders-2"><a class="header" href="#takeorders-2">takeOrders</a></h3>
+<p>Allows <code>msg.sender</code> to attempt to fill a list of orders in sequence
+without needing to place their own order and clear them. This works like
+a market buy but against a specific set of orders. Every order will
+looped over and calculated individually then filled maximally until the
+request input is reached for the <code>msg.sender</code>. The <code>msg.sender</code> is
+responsible for selecting the best orders at the time according to their
+criteria and MAY specify a maximum IO ratio to guard against an order
+spiking the ratio beyond what the <code>msg.sender</code> expected and is
+comfortable with. As orders may be removed and calculate their ratios
+dynamically, all issues fulfilling an order other than misconfiguration
+by the <code>msg.sender</code> are no-ops and DO NOT revert the transaction. This
+allows the <code>msg.sender</code> to optimistically provide a list of orders that
+they aren't sure will completely fill at a good price, and fallback to
+more reliable orders further down their list. Misconfiguration such as
+token mismatches are errors that revert as this is known and static at
+all times to the <code>msg.sender</code> so MUST be provided correctly. <code>msg.sender</code>
+MAY specify a minimum input that MUST be reached across all orders in the
+list, otherwise the transaction will revert, this MAY be set to zero.
+Exactly like withdraw, if there is an active flash loan for <code>msg.sender</code>
+they will have their outstanding loan reduced by the final input amount
+preferentially before sending any tokens. Notably this allows arb bots
+implemented as flash loan borrowers to connect orders against external
+liquidity directly by paying back the loan with a <code>takeOrders</code> call and
+outputting the result of the external trade.
+Rounding errors always favour the order never the <code>msg.sender</code>.</p>
+<pre><code class="language-solidity">function takeOrders(TakeOrdersConfig calldata config) external returns (uint256 totalInput, uint256 totalOutput);
+</code></pre>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>config</code></td><td><code>TakeOrdersConfig</code></td><td>The constraints and list of orders to take, orders are processed sequentially in order as provided, there is NO ATTEMPT onchain to predict/filter/sort these orders other than evaluating them as provided. Inputs and outputs are from the perspective of <code>msg.sender</code> except for values specified by the orders themselves which are the from the perspective of that order.</td></tr>
+</tbody></table>
+</div>
+<p><strong>Returns</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>totalInput</code></td><td><code>uint256</code></td><td>Total tokens sent to <code>msg.sender</code>, taken from order vaults processed.</td></tr>
+<tr><td><code>totalOutput</code></td><td><code>uint256</code></td><td>Total tokens taken from <code>msg.sender</code> and distributed between vaults.</td></tr>
+</tbody></table>
+</div>
+<h3 id="clear-3"><a class="header" href="#clear-3">clear</a></h3>
+<p>Allows <code>msg.sender</code> to match two live orders placed earlier by
+non-interactive parties and claim a bounty in the process. The clearer is
+free to select any two live orders on the order book for matching and as
+long as they have compatible tokens, ratios and amounts, the orders will
+clear. Clearing the orders DOES NOT remove them from the orderbook, they
+remain live until explicitly removed by their owner. Even if the input
+vault balances are completely emptied, the orders remain live until
+removed. This allows order owners to deploy a strategy over a long period
+of time and periodically top up the input vaults. Clearing two orders
+from the same owner is disallowed.
+Any mismatch in the ratios between the two orders will cause either more
+inputs than there are available outputs (transaction will revert) or less
+inputs than there are available outputs. In the latter case the excess
+outputs are given to the <code>msg.sender</code> of clear, to the vaults they
+specify in the clear config. This not only incentivises &quot;automatic&quot; clear
+calls for both alice and bob, but incentivises <em>prioritising greater
+ratio differences</em> with a larger bounty. The second point is important
+because it implicitly prioritises orders that are further from the
+current market price, thus putting constant increasing pressure on the
+entire system the further it drifts from the norm, no matter how esoteric
+the individual order expressions and sizings might be.
+All else equal there are several factors that would impact how reliably
+some order clears relative to the wider market, such as:</p>
+<ul>
+<li>Bounties are effectively percentages of cleared amounts so larger
+orders have larger bounties and cover gas costs more easily</li>
+<li>High gas on the network means that orders are harder to clear
+profitably so the negative spread of the ratios will need to be larger</li>
+<li>Complex and stateful expressions cost more gas to evalulate so the
+negative spread will need to be larger</li>
+<li>Erratic behavior of the order owner could reduce the willingness of
+third parties to interact if it could result in wasted gas due to
+orders suddently being removed before clearance etc.</li>
+<li>Dynamic and highly volatile words used in the expression could be
+ignored or low priority by clearers who want to be sure that they can
+accurately predict the ratios that they include in their clearance</li>
+<li>Geopolitical issues such as sanctions and regulatory restrictions could
+cause issues for certain owners and clearers</li>
+</ul>
+<pre><code class="language-solidity">function clear(
+    Order memory alice,
+    Order memory bob,
+    ClearConfig calldata clearConfig,
+    SignedContextV1[] memory aliceSignedContext,
+    SignedContextV1[] memory bobSignedContext
+) external;
+</code></pre>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>alice</code></td><td><code>Order</code></td><td>Some order to clear.</td></tr>
+<tr><td><code>bob</code></td><td><code>Order</code></td><td>Another order to clear.</td></tr>
+<tr><td><code>clearConfig</code></td><td><code>ClearConfig</code></td><td>Additional configuration for the clearance such as how to handle the bounty payment for the <code>msg.sender</code>.</td></tr>
+<tr><td><code>aliceSignedContext</code></td><td><code>SignedContextV1[]</code></td><td>Optional signed context that is relevant to A.</td></tr>
+<tr><td><code>bobSignedContext</code></td><td><code>SignedContextV1[]</code></td><td>Optional signed context that is relevant to B.</td></tr>
+</tbody></table>
+</div>
+<h2 id="events-2"><a class="header" href="#events-2">Events</a></h2>
+<h3 id="deposit-4"><a class="header" href="#deposit-4">Deposit</a></h3>
+<p>Some tokens have been deposited to a vault.</p>
+<pre><code class="language-solidity">event Deposit(address sender, address token, uint256 vaultId, uint256 amount);
+</code></pre>
+<h3 id="withdraw-4"><a class="header" href="#withdraw-4">Withdraw</a></h3>
+<p>Some tokens have been withdrawn from a vault.</p>
+<pre><code class="language-solidity">event Withdraw(address sender, address token, uint256 vaultId, uint256 targetAmount, uint256 amount);
+</code></pre>
+<h3 id="addorder-4"><a class="header" href="#addorder-4">AddOrder</a></h3>
+<p>An order has been added to the orderbook. The order is permanently and
+always active according to its expression until/unless it is removed.</p>
+<pre><code class="language-solidity">event AddOrder(address sender, IExpressionDeployerV1 expressionDeployer, Order order, uint256 orderHash);
+</code></pre>
+<h3 id="removeorder-4"><a class="header" href="#removeorder-4">RemoveOrder</a></h3>
+<p>An order has been removed from the orderbook. This effectively
+deactivates it. Orders can be added again after removal.</p>
+<pre><code class="language-solidity">event RemoveOrder(address sender, Order order, uint256 orderHash);
+</code></pre>
+<h3 id="takeorder-1"><a class="header" href="#takeorder-1">TakeOrder</a></h3>
+<p>Some order has been taken by <code>msg.sender</code>. This is the same as them
+placing inverse orders then immediately clearing them all, but costs less
+gas and is more convenient and reliable. Analogous to a market buy
+against the specified orders. Each order that is matched within a the
+<code>takeOrders</code> loop emits its own individual event.</p>
+<pre><code class="language-solidity">event TakeOrder(address sender, TakeOrderConfig config, uint256 input, uint256 output);
+</code></pre>
+<h3 id="ordernotfound-1"><a class="header" href="#ordernotfound-1">OrderNotFound</a></h3>
+<p>Emitted when attempting to match an order that either never existed or
+was removed. An event rather than an error so that we allow attempting
+many orders in a loop and NOT rollback on &quot;best effort&quot; basis to clear.</p>
+<pre><code class="language-solidity">event OrderNotFound(address sender, address owner, uint256 orderHash);
+</code></pre>
+<h3 id="orderzeroamount-1"><a class="header" href="#orderzeroamount-1">OrderZeroAmount</a></h3>
+<p>Emitted when an order evaluates to a zero amount. An event rather than an
+error so that we allow attempting many orders in a loop and NOT rollback
+on a &quot;best effort&quot; basis to clear.</p>
+<pre><code class="language-solidity">event OrderZeroAmount(address sender, address owner, uint256 orderHash);
+</code></pre>
+<h3 id="orderexceedsmaxratio-1"><a class="header" href="#orderexceedsmaxratio-1">OrderExceedsMaxRatio</a></h3>
+<p>Emitted when an order evaluates to a ratio exceeding the counterparty's
+maximum limit. An error rather than an error so that we allow attempting
+many orders in a loop and NOT rollback on a &quot;best effort&quot; basis to clear.</p>
+<pre><code class="language-solidity">event OrderExceedsMaxRatio(address sender, address owner, uint256 orderHash);
+</code></pre>
+<h3 id="clear-4"><a class="header" href="#clear-4">Clear</a></h3>
+<p>Emitted before two orders clear. Covers both orders and includes all the
+state before anything is calculated.</p>
+<pre><code class="language-solidity">event Clear(address sender, Order alice, Order bob, ClearConfig clearConfig);
+</code></pre>
+<h3 id="afterclear-1"><a class="header" href="#afterclear-1">AfterClear</a></h3>
+<p>Emitted after two orders clear. Includes all final state changes in the
+vault balances, including the clearer's vaults.</p>
+<pre><code class="language-solidity">event AfterClear(address sender, ClearStateChange clearStateChange);
+</code></pre>
+<h2 id="errors"><a class="header" href="#errors">Errors</a></h2>
+<h3 id="zerodepositamount"><a class="header" href="#zerodepositamount">ZeroDepositAmount</a></h3>
+<p>MUST be thrown by <code>deposit</code> if the amount is zero.</p>
+<pre><code class="language-solidity">error ZeroDepositAmount(address sender, address token, uint256 vaultId);
+</code></pre>
+<h3 id="zerowithdrawtargetamount"><a class="header" href="#zerowithdrawtargetamount">ZeroWithdrawTargetAmount</a></h3>
+<p>MUST be thrown by <code>withdraw</code> if the amount <em>requested</em> to withdraw is
+zero. The withdrawal MAY still not move any tokens if the vault balance
+is zero, or the withdrawal is used to repay a flash loan.</p>
+<pre><code class="language-solidity">error ZeroWithdrawTargetAmount(address sender, address token, uint256 vaultId);
+</code></pre>
+<h3 id="orderexists"><a class="header" href="#orderexists">OrderExists</a></h3>
+<p>MUST be thrown by <code>addOrder</code> if the order already exists.</p>
+<pre><code class="language-solidity">error OrderExists(address sender, uint256 orderHash);
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="depositconfig-1"><a class="header" href="#depositconfig-1">DepositConfig</a></h1>
+<p><a href="https://github.com/rainprotocol/rain.orderbook/blob/bc1ef8bda6d1f1c6857ff284f17d6369cd1c4dbe/src/interface/IOrderBookV2.sol">Git Source</a></p>
+<p>Configuration for a deposit. All deposits are processed by and for
+<code>msg.sender</code> so the vaults are unambiguous here.</p>
+<pre><code class="language-solidity">struct DepositConfig {
+    address token;
+    uint256 vaultId;
+    uint256 amount;
+}
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="withdrawconfig-1"><a class="header" href="#withdrawconfig-1">WithdrawConfig</a></h1>
+<p><a href="https://github.com/rainprotocol/rain.orderbook/blob/bc1ef8bda6d1f1c6857ff284f17d6369cd1c4dbe/src/interface/IOrderBookV2.sol">Git Source</a></p>
+<p>Configuration for a withdrawal. All withdrawals are processed by and for
+<code>msg.sender</code> so the vaults are unambiguous here.</p>
+<pre><code class="language-solidity">struct WithdrawConfig {
+    address token;
+    uint256 vaultId;
+    uint256 amount;
+}
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="io-2"><a class="header" href="#io-2">IO</a></h1>
+<p><a href="https://github.com/rainprotocol/rain.orderbook/blob/bc1ef8bda6d1f1c6857ff284f17d6369cd1c4dbe/src/interface/IOrderBookV2.sol">Git Source</a></p>
+<p>Configuration for a single input or output on an <code>Order</code>.</p>
+<pre><code class="language-solidity">struct IO {
+    address token;
+    uint8 decimals;
+    uint256 vaultId;
+}
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="orderconfig-2"><a class="header" href="#orderconfig-2">OrderConfig</a></h1>
+<p><a href="https://github.com/rainprotocol/rain.orderbook/blob/bc1ef8bda6d1f1c6857ff284f17d6369cd1c4dbe/src/interface/IOrderBookV2.sol">Git Source</a></p>
+<p>Config the order owner may provide to define their order. The <code>msg.sender</code>
+that adds an order cannot modify the owner nor bypass the integrity check of
+the expression deployer that they specify. However they MAY specify a
+deployer with a corrupt integrity check, so counterparties and clearers MUST
+check the DISpair of the order and avoid untrusted pairings.</p>
+<pre><code class="language-solidity">struct OrderConfig {
+    IO[] validInputs;
+    IO[] validOutputs;
+    EvaluableConfig evaluableConfig;
+    bytes meta;
+}
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="order-2"><a class="header" href="#order-2">Order</a></h1>
+<p><a href="https://github.com/rainprotocol/rain.orderbook/blob/bc1ef8bda6d1f1c6857ff284f17d6369cd1c4dbe/src/interface/IOrderBookV2.sol">Git Source</a></p>
+<p>Defines a fully deployed order ready to evaluate by Orderbook.</p>
+<pre><code class="language-solidity">struct Order {
+    address owner;
+    bool handleIO;
+    Evaluable evaluable;
+    IO[] validInputs;
+    IO[] validOutputs;
+}
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="takeordersconfig-2"><a class="header" href="#takeordersconfig-2">TakeOrdersConfig</a></h1>
+<p><a href="https://github.com/rainprotocol/rain.orderbook/blob/bc1ef8bda6d1f1c6857ff284f17d6369cd1c4dbe/src/interface/IOrderBookV2.sol">Git Source</a></p>
+<p>Config for a list of orders to take sequentially as part of a <code>takeOrders</code>
+call.</p>
+<pre><code class="language-solidity">struct TakeOrdersConfig {
+    address output;
+    address input;
+    uint256 minimumInput;
+    uint256 maximumInput;
+    uint256 maximumIORatio;
+    TakeOrderConfig[] orders;
+}
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="takeorderconfig-2"><a class="header" href="#takeorderconfig-2">TakeOrderConfig</a></h1>
+<p><a href="https://github.com/rainprotocol/rain.orderbook/blob/bc1ef8bda6d1f1c6857ff284f17d6369cd1c4dbe/src/interface/IOrderBookV2.sol">Git Source</a></p>
+<p>Config for an individual take order from the overall list of orders in a
+call to <code>takeOrders</code>.</p>
+<pre><code class="language-solidity">struct TakeOrderConfig {
+    Order order;
+    uint256 inputIOIndex;
+    uint256 outputIOIndex;
+    SignedContextV1[] signedContext;
+}
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="clearconfig-2"><a class="header" href="#clearconfig-2">ClearConfig</a></h1>
+<p><a href="https://github.com/rainprotocol/rain.orderbook/blob/bc1ef8bda6d1f1c6857ff284f17d6369cd1c4dbe/src/interface/IOrderBookV2.sol">Git Source</a></p>
+<p>Additional config to a <code>clear</code> that allows two orders to be fully matched to
+a specific token moment. Also defines the bounty for the clearer.</p>
+<pre><code class="language-solidity">struct ClearConfig {
+    uint256 aliceInputIOIndex;
+    uint256 aliceOutputIOIndex;
+    uint256 bobInputIOIndex;
+    uint256 bobOutputIOIndex;
+    uint256 aliceBountyVaultId;
+    uint256 bobBountyVaultId;
+}
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="clearstatechange-2"><a class="header" href="#clearstatechange-2">ClearStateChange</a></h1>
+<p><a href="https://github.com/rainprotocol/rain.orderbook/blob/bc1ef8bda6d1f1c6857ff284f17d6369cd1c4dbe/src/interface/IOrderBookV2.sol">Git Source</a></p>
+<p>Summary of the vault state changes due to clearing an order. NOT the state
+changes sent to the interpreter store, these are the LOCAL CHANGES in vault
+balances. Note that the difference in inputs/outputs overall between the
+counterparties is the bounty paid to the entity that cleared the order.</p>
+<pre><code class="language-solidity">struct ClearStateChange {
+    uint256 aliceOutput;
+    uint256 bobOutput;
+    uint256 aliceInput;
+    uint256 bobInput;
+}
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="iorderbookv2"><a class="header" href="#iorderbookv2">IOrderBookV2</a></h1>
+<p><a href="https://github.com/rainprotocol/rain.orderbook/blob/bc1ef8bda6d1f1c6857ff284f17d6369cd1c4dbe/src/interface/IOrderBookV2.sol">Git Source</a></p>
+<p><strong>Inherits:</strong>
+<a href="src/interface/IOrderBookV2.sol//src/interface/ierc3156/IERC3156FlashLender.sol/interface.IERC3156FlashLender.html">IERC3156FlashLender</a>, IInterpreterCallerV2</p>
+<p>An orderbook that deploys <em>strategies</em> represented as interpreter
+expressions rather than individual orders. The order book contract itself
+behaves similarly to an <code>ERC4626</code> vault but with much more fine grained
+control over how tokens are allocated and moved internally by their owners,
+and without any concept of &quot;shares&quot;. Token owners MAY deposit and withdraw
+their tokens under arbitrary vault IDs on a per-token basis, then define
+orders that specify how tokens move between vaults according to an expression.
+The expression returns a maximum amount and a token input/output ratio from
+the perpective of the order. When two expressions intersect, as in their
+ratios are the inverse of each other, then tokens can move between vaults.
+For example, consider order A with input TKNA and output TKNB with a constant
+ratio of 100:1. This order in isolation has no ability to move tokens. If
+an order B appears with input TKNB and output TKNA and a ratio of 1:100 then
+this is a perfect match with order A. In this case 100 TKNA will move from
+order B to order A and 1 TKNB will move from order A to order B.
+IO ratios are always specified as input:output and are 18 decimal fixed point
+values. The maximum amount that can be moved in the current clearance is also
+set by the order expression as an 18 decimal fixed point value.
+Typically orders will not clear when their match is exactly 1:1 as the
+clearer needs to pay gas to process the match. Each order will get exactly
+the ratio it calculates when it does clear so if there is <em>overlap</em> in the
+ratios then the clearer keeps the difference. In our above example, consider
+order B asking a ratio of 1:110 instead of 1:100. In this case 100 TKNA will
+move from order B to order A and 10 TKNA will move to the clearer's vault and
+1 TKNB will move from order A to order B. In the case of fixed prices this is
+not very interesting as order B could more simply take order A directly for
+cheaper rather than involving a third party. Indeed, Orderbook supports a
+direct &quot;take orders&quot; method that works similar to a &quot;market buy&quot;. In the case
+of dynamic expression based ratios, it allows both order A and order B to
+clear non-interactively according to their strategy, trading off active
+management, dealing with front-running, MEV, etc. for zero-gas and
+exact-ratio clearance.
+The general invariant for clearing and take orders is:</p>
+<pre><code>ratioA = InputA / OutputA
+ratioB = InputB / OutputB
+ratioA * ratioB = ( InputA * InputB ) / ( OutputA * OutputB )
+OutputA &gt;= InputB
+OutputB &gt;= InputA
+∴ ratioA * ratioB &lt;= 1
+</code></pre>
+<p>Orderbook is <code>IERC3156FlashLender</code> compliant with a 0 fee flash loan
+implementation to allow external liquidity from other onchain DEXes to match
+against orderbook expressions. All deposited tokens across all vaults are
+available for flashloan, the flashloan MAY BE REPAID BY CALLING TAKE ORDER
+such that Orderbook's liability to its vaults is decreased by an incoming
+trade from the flashloan borrower. See <code>ZeroExOrderBookFlashBorrower</code> for
+an example of how this works in practise.
+Orderbook supports many to many input/output token relationship, for example
+some order can specify an array of stables it would be willing to accept in
+return for some ETH. This removes the need for a combinatorial explosion of
+order strategies between like assets but introduces the issue of token
+decimal handling. End users understand that &quot;one&quot; USDT is roughly equal to
+&quot;one&quot; DAI, but onchain this is incorrect by <em>12 orders of magnitude</em>. This
+is because &quot;one&quot; DAI is <code>1e18</code> tokens and &quot;one&quot; USDT is <code>1e6</code> tokens. The
+orderbook is allowing orders to deploy expressions that define <em>economic
+equivalence</em> but this doesn't map 1:1 with numeric equivalence in a many to
+many setup behind token decimal convensions. The solution is to require that
+end users who place orders provide the decimals of each token they include
+in their valid IO lists, and to calculate all amounts and ratios in their
+expressions <em>as though they were 18 decimal fixed point values</em>. Orderbook
+will then automatically rescale the expression values before applying the
+final vault movements. If an order provides the &quot;wrong&quot; decimal values for
+some token then it will simply calculate its own ratios and amounts
+incorrectly which will either lead to no matching orders or a very bad trade
+for the order owner. There is no way that misrepresenting decimals can attack
+some other order by a counterparty. Orderbook DOES NOT read decimals from
+tokens onchain because A. this would be gas for an external call to a cold
+token contract and B. the ERC20 standard specifically states NOT to read
+decimals from the interface onchain.
+Token amounts and ratios returned by calculate order MUST be 18 decimal fixed
+point values. Token amounts input to handle IO MUST be the exact absolute
+values that move between the vaults, i.e. NOT rescaled to 18 decimals. The
+author of the handle IO expression MUST use the token decimals and amounts to
+rescale themselves if they want that logic, notably the expression author
+will need to specify the desired rounding behaviour in the rescaling process.
+When two orders clear there are NO TOKEN MOVEMENTS, only internal vault
+balances are updated from the input and output vaults. Typically this results
+in less gas per clear than calling external token transfers and also avoids
+issues with reentrancy, allowances, external balances etc. This also means
+that REBASING TOKENS AND TOKENS WITH DYNAMIC BALANCE ARE NOT SUPPORTED.
+Orderbook ONLY WORKS IF TOKEN BALANCES ARE 1:1 WITH ADDITION/SUBTRACTION PER
+VAULT MOVEMENT.
+Dust due to rounding errors always favours the order. Output max is rounded
+down and IO ratios are rounded up. Input and output amounts are always
+converted to absolute values before applying to vault balances such that
+orderbook always retains fully collateralised inventory of underlying token
+balances to support withdrawals, with the caveat that dynamic token balanes
+are not supported.
+When an order clears it is NOT removed. Orders remain active until the owner
+deactivates them. This is gas efficient as order owners MAY deposit more
+tokens in a vault with an order against it many times and the order strategy
+will continue to be clearable according to its expression. As vault IDs are
+<code>uint256</code> values there are effectively infinite possible vaults for any token
+so there is no limit to how many active orders any address can have at one
+time. This also allows orders to be daisy chained arbitrarily where output
+vaults for some order are the input vaults for some other order.
+Expression storage is namespaced by order owner, so gets and sets are unique
+to each onchain address. Order owners MUST TAKE CARE not to override their
+storage sets globally across all their orders, which they can do most simply
+by hashing the order hash into their get/set keys inside the expression. This
+gives maximum flexibility for shared state across orders without allowing
+order owners to attack and overwrite values stored by orders placed by their
+counterparty.
+Note that each order specifies its own interpreter and deployer so the
+owner is responsible for not corrupting their own calculations with bad
+interpreters. This also means the Orderbook MUST assume the interpreter, and
+notably the interpreter's store, is malicious and guard against reentrancy
+etc.
+As Orderbook supports any expression that can run on any <code>IInterpreterV1</code> and
+counterparties are available to the order, order strategies are free to
+implement KYC/membership, tracking, distributions, stock, buybacks, etc. etc.</p>
+<h2 id="functions-8"><a class="header" href="#functions-8">Functions</a></h2>
+<h3 id="vaultbalance-3"><a class="header" href="#vaultbalance-3">vaultBalance</a></h3>
+<p>Get the current balance of a vault for a given owner, token and vault ID.</p>
+<pre><code class="language-solidity">function vaultBalance(address owner, address token, uint256 id) external view returns (uint256 balance);
+</code></pre>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>owner</code></td><td><code>address</code></td><td>The owner of the vault.</td></tr>
+<tr><td><code>token</code></td><td><code>address</code></td><td>The token the vault is for.</td></tr>
+<tr><td><code>id</code></td><td><code>uint256</code></td><td>The vault ID to read.</td></tr>
+</tbody></table>
+</div>
+<p><strong>Returns</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>balance</code></td><td><code>uint256</code></td><td>The current balance of the vault.</td></tr>
+</tbody></table>
+</div>
+<h3 id="deposit-5"><a class="header" href="#deposit-5">deposit</a></h3>
+<p><code>msg.sender</code> deposits tokens according to config. The config specifies
+the vault to deposit tokens under. Delegated depositing is NOT supported.
+Depositing DOES NOT mint shares (unlike ERC4626) so the overall vaulted
+experience is much simpler as there is always a 1:1 relationship between
+deposited assets and vault balances globally and individually. This
+mitigates rounding/dust issues, speculative behaviour on derived assets,
+possible regulatory issues re: whether a vault share is a security, code
+bloat on the vault, complex mint/deposit/withdraw/redeem 4-way logic,
+the need for preview functions, etc. etc.
+At the same time, allowing vault IDs to be specified by the depositor
+allows much more granular and direct control over token movements within
+Orderbook than either ERC4626 vault shares or mere contract-level ERC20
+allowances can facilitate.</p>
+<pre><code class="language-solidity">function deposit(DepositConfig calldata config) external;
+</code></pre>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>config</code></td><td><code>DepositConfig</code></td><td>All config for the deposit.</td></tr>
+</tbody></table>
+</div>
+<h3 id="withdraw-5"><a class="header" href="#withdraw-5">withdraw</a></h3>
+<p>Allows the sender to withdraw any tokens from their own vaults. If the
+withrawer has an active flash loan debt denominated in the same token
+being withdrawn then Orderbook will merely reduce the debt and NOT send
+the amount of tokens repaid to the flashloan debt.</p>
+<pre><code class="language-solidity">function withdraw(WithdrawConfig calldata config) external;
+</code></pre>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>config</code></td><td><code>WithdrawConfig</code></td><td>All config required to withdraw. Notably if the amount is less than the current vault balance then the vault will be cleared to 0 rather than the withdraw transaction reverting.</td></tr>
+</tbody></table>
+</div>
+<h3 id="addorder-5"><a class="header" href="#addorder-5">addOrder</a></h3>
+<p>Given an order config, deploys the expression and builds the full <code>Order</code>
+for the config, then records it as an active order. Delegated adding an
+order is NOT supported. The <code>msg.sender</code> that adds an order is ALWAYS
+the owner and all resulting vault movements are their own.</p>
+<pre><code class="language-solidity">function addOrder(OrderConfig calldata config) external;
+</code></pre>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>config</code></td><td><code>OrderConfig</code></td><td>All config required to build an <code>Order</code>.</td></tr>
+</tbody></table>
+</div>
+<h3 id="removeorder-5"><a class="header" href="#removeorder-5">removeOrder</a></h3>
+<p>Order owner can remove their own orders. Delegated order removal is NOT
+supported and will revert. Removing an order multiple times or removing
+an order that never existed are valid, the event will be emitted and the
+transaction will complete with that order hash definitely, redundantly
+not live.</p>
+<pre><code class="language-solidity">function removeOrder(Order calldata order) external;
+</code></pre>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>order</code></td><td><code>Order</code></td><td>The <code>Order</code> data exactly as it was added.</td></tr>
+</tbody></table>
+</div>
+<h3 id="takeorders-3"><a class="header" href="#takeorders-3">takeOrders</a></h3>
+<p>Allows <code>msg.sender</code> to attempt to fill a list of orders in sequence
+without needing to place their own order and clear them. This works like
+a market buy but against a specific set of orders. Every order will
+looped over and calculated individually then filled maximally until the
+request input is reached for the <code>msg.sender</code>. The <code>msg.sender</code> is
+responsible for selecting the best orders at the time according to their
+criteria and MAY specify a maximum IO ratio to guard against an order
+spiking the ratio beyond what the <code>msg.sender</code> expected and is
+comfortable with. As orders may be removed and calculate their ratios
+dynamically, all issues fulfilling an order other than misconfiguration
+by the <code>msg.sender</code> are no-ops and DO NOT revert the transaction. This
+allows the <code>msg.sender</code> to optimistically provide a list of orders that
+they aren't sure will completely fill at a good price, and fallback to
+more reliable orders further down their list. Misconfiguration such as
+token mismatches are errors that revert as this is known and static at
+all times to the <code>msg.sender</code> so MUST be provided correctly. <code>msg.sender</code>
+MAY specify a minimum input that MUST be reached across all orders in the
+list, otherwise the transaction will revert, this MAY be set to zero.
+Exactly like withdraw, if there is an active flash loan for <code>msg.sender</code>
+they will have their outstanding loan reduced by the final input amount
+preferentially before sending any tokens. Notably this allows arb bots
+implemented as flash loan borrowers to connect orders against external
+liquidity directly by paying back the loan with a <code>takeOrders</code> call and
+outputting the result of the external trade.
+Rounding errors always favour the order never the <code>msg.sender</code>.</p>
+<pre><code class="language-solidity">function takeOrders(TakeOrdersConfig calldata config) external returns (uint256 totalInput, uint256 totalOutput);
+</code></pre>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>config</code></td><td><code>TakeOrdersConfig</code></td><td>The constraints and list of orders to take, orders are processed sequentially in order as provided, there is NO ATTEMPT onchain to predict/filter/sort these orders other than evaluating them as provided. Inputs and outputs are from the perspective of <code>msg.sender</code> except for values specified by the orders themselves which are the from the perspective of that order.</td></tr>
+</tbody></table>
+</div>
+<p><strong>Returns</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>totalInput</code></td><td><code>uint256</code></td><td>Total tokens sent to <code>msg.sender</code>, taken from order vaults processed.</td></tr>
+<tr><td><code>totalOutput</code></td><td><code>uint256</code></td><td>Total tokens taken from <code>msg.sender</code> and distributed between vaults.</td></tr>
+</tbody></table>
+</div>
+<h3 id="clear-5"><a class="header" href="#clear-5">clear</a></h3>
+<p>Allows <code>msg.sender</code> to match two live orders placed earlier by
+non-interactive parties and claim a bounty in the process. The clearer is
+free to select any two live orders on the order book for matching and as
+long as they have compatible tokens, ratios and amounts, the orders will
+clear. Clearing the orders DOES NOT remove them from the orderbook, they
+remain live until explicitly removed by their owner. Even if the input
+vault balances are completely emptied, the orders remain live until
+removed. This allows order owners to deploy a strategy over a long period
+of time and periodically top up the input vaults. Clearing two orders
+from the same owner is disallowed.
+Any mismatch in the ratios between the two orders will cause either more
+inputs than there are available outputs (transaction will revert) or less
+inputs than there are available outputs. In the latter case the excess
+outputs are given to the <code>msg.sender</code> of clear, to the vaults they
+specify in the clear config. This not only incentivises &quot;automatic&quot; clear
+calls for both alice and bob, but incentivises <em>prioritising greater
+ratio differences</em> with a larger bounty. The second point is important
+because it implicitly prioritises orders that are further from the
+current market price, thus putting constant increasing pressure on the
+entire system the further it drifts from the norm, no matter how esoteric
+the individual order expressions and sizings might be.
+All else equal there are several factors that would impact how reliably
+some order clears relative to the wider market, such as:</p>
+<ul>
+<li>Bounties are effectively percentages of cleared amounts so larger
+orders have larger bounties and cover gas costs more easily</li>
+<li>High gas on the network means that orders are harder to clear
+profitably so the negative spread of the ratios will need to be larger</li>
+<li>Complex and stateful expressions cost more gas to evalulate so the
+negative spread will need to be larger</li>
+<li>Erratic behavior of the order owner could reduce the willingness of
+third parties to interact if it could result in wasted gas due to
+orders suddently being removed before clearance etc.</li>
+<li>Dynamic and highly volatile words used in the expression could be
+ignored or low priority by clearers who want to be sure that they can
+accurately predict the ratios that they include in their clearance</li>
+<li>Geopolitical issues such as sanctions and regulatory restrictions could
+cause issues for certain owners and clearers</li>
+</ul>
+<pre><code class="language-solidity">function clear(
+    Order memory alice,
+    Order memory bob,
+    ClearConfig calldata clearConfig,
+    SignedContextV1[] memory aliceSignedContext,
+    SignedContextV1[] memory bobSignedContext
+) external;
+</code></pre>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>alice</code></td><td><code>Order</code></td><td>Some order to clear.</td></tr>
+<tr><td><code>bob</code></td><td><code>Order</code></td><td>Another order to clear.</td></tr>
+<tr><td><code>clearConfig</code></td><td><code>ClearConfig</code></td><td>Additional configuration for the clearance such as how to handle the bounty payment for the <code>msg.sender</code>.</td></tr>
+<tr><td><code>aliceSignedContext</code></td><td><code>SignedContextV1[]</code></td><td>Optional signed context that is relevant to A.</td></tr>
+<tr><td><code>bobSignedContext</code></td><td><code>SignedContextV1[]</code></td><td>Optional signed context that is relevant to B.</td></tr>
+</tbody></table>
+</div>
+<h2 id="events-3"><a class="header" href="#events-3">Events</a></h2>
+<h3 id="deposit-6"><a class="header" href="#deposit-6">Deposit</a></h3>
+<p>Some tokens have been deposited to a vault.</p>
+<pre><code class="language-solidity">event Deposit(address sender, DepositConfig config);
+</code></pre>
+<h3 id="withdraw-6"><a class="header" href="#withdraw-6">Withdraw</a></h3>
+<p>Some tokens have been withdrawn from a vault.</p>
+<pre><code class="language-solidity">event Withdraw(address sender, WithdrawConfig config, uint256 amount);
+</code></pre>
+<h3 id="addorder-6"><a class="header" href="#addorder-6">AddOrder</a></h3>
+<p>An order has been added to the orderbook. The order is permanently and
+always active according to its expression until/unless it is removed.</p>
+<pre><code class="language-solidity">event AddOrder(address sender, IExpressionDeployerV1 expressionDeployer, Order order, uint256 orderHash);
+</code></pre>
+<h3 id="removeorder-6"><a class="header" href="#removeorder-6">RemoveOrder</a></h3>
+<p>An order has been removed from the orderbook. This effectively
+deactivates it. Orders can be added again after removal.</p>
+<pre><code class="language-solidity">event RemoveOrder(address sender, Order order, uint256 orderHash);
+</code></pre>
+<h3 id="takeorder-2"><a class="header" href="#takeorder-2">TakeOrder</a></h3>
+<p>Some order has been taken by <code>msg.sender</code>. This is the same as them
+placing inverse orders then immediately clearing them all, but costs less
+gas and is more convenient and reliable. Analogous to a market buy
+against the specified orders. Each order that is matched within a the
+<code>takeOrders</code> loop emits its own individual event.</p>
+<pre><code class="language-solidity">event TakeOrder(address sender, TakeOrderConfig config, uint256 input, uint256 output);
+</code></pre>
+<h3 id="ordernotfound-2"><a class="header" href="#ordernotfound-2">OrderNotFound</a></h3>
+<p>Emitted when attempting to match an order that either never existed or
+was removed. An event rather than an error so that we allow attempting
+many orders in a loop and NOT rollback on &quot;best effort&quot; basis to clear.</p>
+<pre><code class="language-solidity">event OrderNotFound(address sender, address owner, uint256 orderHash);
+</code></pre>
+<h3 id="orderzeroamount-2"><a class="header" href="#orderzeroamount-2">OrderZeroAmount</a></h3>
+<p>Emitted when an order evaluates to a zero amount. An event rather than an
+error so that we allow attempting many orders in a loop and NOT rollback
+on a &quot;best effort&quot; basis to clear.</p>
+<pre><code class="language-solidity">event OrderZeroAmount(address sender, address owner, uint256 orderHash);
+</code></pre>
+<h3 id="orderexceedsmaxratio-2"><a class="header" href="#orderexceedsmaxratio-2">OrderExceedsMaxRatio</a></h3>
+<p>Emitted when an order evaluates to a ratio exceeding the counterparty's
+maximum limit. An error rather than an error so that we allow attempting
+many orders in a loop and NOT rollback on a &quot;best effort&quot; basis to clear.</p>
+<pre><code class="language-solidity">event OrderExceedsMaxRatio(address sender, address owner, uint256 orderHash);
+</code></pre>
+<h3 id="clear-6"><a class="header" href="#clear-6">Clear</a></h3>
+<p>Emitted before two orders clear. Covers both orders and includes all the
+state before anything is calculated.</p>
+<pre><code class="language-solidity">event Clear(address sender, Order alice, Order bob, ClearConfig clearConfig);
+</code></pre>
+<h3 id="afterclear-2"><a class="header" href="#afterclear-2">AfterClear</a></h3>
+<p>Emitted after two orders clear. Includes all final state changes in the
+vault balances, including the clearer's vaults.</p>
+<pre><code class="language-solidity">event AfterClear(address sender, ClearStateChange clearStateChange);
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="contents-6"><a class="header" href="#contents-6">Contents</a></h1>
+<ul>
+<li><a href="src/lib/LibOrder.sol/library.LibOrder.html">LibOrder</a></li>
+<li><a href="src/lib/LibOrderBook.sol/struct.OrderIOCalculation.html">OrderIOCalculation</a></li>
+<li><a href="src/lib/LibOrderBook.sol/library.LibOrderBook.html">LibOrderBook</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="liborder"><a class="header" href="#liborder">LibOrder</a></h1>
+<p><a href="https://github.com/rainprotocol/rain.orderbook/blob/bc1ef8bda6d1f1c6857ff284f17d6369cd1c4dbe/src/lib/LibOrder.sol">Git Source</a></p>
+<p>Consistent handling of <code>Order</code> for where it matters w.r.t.
+determinism and security.</p>
+<h2 id="functions-9"><a class="header" href="#functions-9">Functions</a></h2>
+<h3 id="hash"><a class="header" href="#hash">hash</a></h3>
+<p>Hashes <code>Order</code> in a secure and deterministic way. Uses abi.encode rather
+than abi.encodePacked to guard against potential collisions where many
+inputs encode to the same output bytes.</p>
+<pre><code class="language-solidity">function hash(Order memory order) internal pure returns (uint256);
+</code></pre>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>order</code></td><td><code>Order</code></td><td>The order to hash.</td></tr>
+</tbody></table>
+</div>
+<p><strong>Returns</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>&lt;none&gt;</code></td><td><code>uint256</code></td><td>The hash of <code>order</code> as a <code>uint256</code> rather than <code>bytes32</code>.</td></tr>
+</tbody></table>
+</div><div style="break-before: page; page-break-before: always;"></div><h1 id="orderiocalculation"><a class="header" href="#orderiocalculation">OrderIOCalculation</a></h1>
+<p><a href="https://github.com/rainprotocol/rain.orderbook/blob/bc1ef8bda6d1f1c6857ff284f17d6369cd1c4dbe/src/lib/LibOrderBook.sol">Git Source</a></p>
+<p>All information resulting from an order calculation that allows for vault IO
+to be calculated and applied, then the handle IO entrypoint to be dispatched.</p>
+<pre><code class="language-solidity">struct OrderIOCalculation {
+    uint256 outputMax;
+    uint256 IORatio;
+    uint256[][] context;
+    StateNamespace namespace;
+    uint256[] kvs;
+}
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="liborderbook"><a class="header" href="#liborderbook">LibOrderBook</a></h1>
+<p><a href="https://github.com/rainprotocol/rain.orderbook/blob/bc1ef8bda6d1f1c6857ff284f17d6369cd1c4dbe/src/lib/LibOrderBook.sol">Git Source</a></p>
+<h2 id="functions-10"><a class="header" href="#functions-10">Functions</a></h2>
+<h3 id="_clearstatechange"><a class="header" href="#_clearstatechange">_clearStateChange</a></h3>
+<p>Calculates the clear state change given both order calculations for order
+alice and order bob. The input of each is their output multiplied by
+their IO ratio and the output of each is the smaller of their maximum
+output and the counterparty IO * max output.</p>
+<pre><code class="language-solidity">function _clearStateChange(
+    OrderIOCalculation memory aliceOrderIOCalculation,
+    OrderIOCalculation memory bobOrderIOCalculation
+) internal pure returns (ClearStateChange memory clearStateChange);
+</code></pre>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>aliceOrderIOCalculation</code></td><td><code>OrderIOCalculation</code></td><td>Order calculation for Alice.</td></tr>
+<tr><td><code>bobOrderIOCalculation</code></td><td><code>OrderIOCalculation</code></td><td>Order calculation for Bob.</td></tr>
+</tbody></table>
+</div>
+<p><strong>Returns</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>clearStateChange</code></td><td><code>ClearStateChange</code></td><td>The clear state change with absolute inputs and outputs for Alice and Bob.</td></tr>
+</tbody></table>
+</div>
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+        <script src="solidity.min.js"></script>
+
+        <script>
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+
+    </div>
+    </body>
+</html>
